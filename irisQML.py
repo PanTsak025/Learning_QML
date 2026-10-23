@@ -88,8 +88,8 @@ test_score_q4 = vqc.score(test_features, test_labels)
 print(f"Quantum VQC on the training set: {train_score_q4:.4f}")
 print(f"Quantum VQC on the test set: {test_score_q4:.4f}")
 
-ansatz = efficient_su2(num_qubits=num_features, reps=3)
-optimizer = COBYLA(maxiter=150)
+ansatz = efficient_su2(num_qubits=num_features, reps=6)
+optimizer = COBYLA(maxiter=200)
 
 vqc = VQC(
     feature_map=feature_map,
