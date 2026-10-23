@@ -10,7 +10,7 @@ from sklearn.svm import SVC
 
 from qiskit.circuit.library import zz_feature_map, real_amplitudes, efficient_su2
 from qiskit_machine_learning.optimizers import COBYLA
-from qiskit.primitives import StatevectorSampler as Sampler
+from qiskit.primitives import StatevectorSampler as Sampler # simulator that returns the statevector of the circuit 
 from qiskit_machine_learning.algorithms.classifiers import VQC
 
 
