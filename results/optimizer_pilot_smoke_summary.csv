@@ -1,0 +1,4 @@
+optimizer,f1_mean,f1_std,loss_mean,seconds_mean,evaluations_mean
+L-BFGS-B,0.7485,0.0728,0.601,7.15,7.5
+SPSA,0.7382,0.1576,0.7226,3.4,30.0
+COBYLA,0.7,0.1414,0.6566,1.4,30.0

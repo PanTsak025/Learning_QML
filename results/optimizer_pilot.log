@@ -1,0 +1,32 @@
+nohup: ignoring input
+{'feature_map': 'ry', 'seed': 0, 'optimizer': 'COBYLA', 'val_macro_f1': 0.7498, 'val_accuracy': 0.754, 'final_train_loss': 0.6901, 'loss_evaluations': np.int64(300), 'gradient_evaluations': None, 'iterations': None, 'seconds': 61.5}
+{'feature_map': 'ry', 'seed': 0, 'optimizer': 'SPSA', 'val_macro_f1': 0.7247, 'val_accuracy': 0.734, 'final_train_loss': 0.7184, 'loss_evaluations': 300, 'gradient_evaluations': None, 'iterations': 150, 'seconds': 72.7}
+{'feature_map': 'ry', 'seed': 0, 'optimizer': 'L-BFGS-B', 'val_macro_f1': 0.7538, 'val_accuracy': 0.758, 'final_train_loss': 0.692, 'loss_evaluations': 24, 'gradient_evaluations': 24, 'iterations': 14, 'seconds': 168.7}
+{'feature_map': 'zz', 'seed': 0, 'optimizer': 'COBYLA', 'val_macro_f1': 0.6291, 'val_accuracy': 0.639, 'final_train_loss': 0.8239, 'loss_evaluations': np.int64(300), 'gradient_evaluations': None, 'iterations': None, 'seconds': 85.1}
+{'feature_map': 'zz', 'seed': 0, 'optimizer': 'SPSA', 'val_macro_f1': 0.6793, 'val_accuracy': 0.682, 'final_train_loss': 0.8563, 'loss_evaluations': 300, 'gradient_evaluations': None, 'iterations': 150, 'seconds': 99.5}
+{'feature_map': 'zz', 'seed': 0, 'optimizer': 'L-BFGS-B', 'val_macro_f1': 0.6126, 'val_accuracy': 0.621, 'final_train_loss': 0.8502, 'loss_evaluations': 33, 'gradient_evaluations': 33, 'iterations': 20, 'seconds': 353.2}
+{'feature_map': 'ry', 'seed': 1, 'optimizer': 'COBYLA', 'val_macro_f1': 0.7749, 'val_accuracy': 0.776, 'final_train_loss': 0.628, 'loss_evaluations': np.int64(300), 'gradient_evaluations': None, 'iterations': None, 'seconds': 56.0}
+{'feature_map': 'ry', 'seed': 1, 'optimizer': 'SPSA', 'val_macro_f1': 0.7501, 'val_accuracy': 0.753, 'final_train_loss': 0.67, 'loss_evaluations': 300, 'gradient_evaluations': None, 'iterations': 150, 'seconds': 66.3}
+{'feature_map': 'ry', 'seed': 1, 'optimizer': 'L-BFGS-B', 'val_macro_f1': 0.7834, 'val_accuracy': 0.784, 'final_train_loss': 0.6429, 'loss_evaluations': 29, 'gradient_evaluations': 29, 'iterations': 11, 'seconds': 198.9}
+{'feature_map': 'zz', 'seed': 1, 'optimizer': 'COBYLA', 'val_macro_f1': 0.6553, 'val_accuracy': 0.656, 'final_train_loss': 0.7938, 'loss_evaluations': np.int64(300), 'gradient_evaluations': None, 'iterations': None, 'seconds': 85.4}
+{'feature_map': 'zz', 'seed': 1, 'optimizer': 'SPSA', 'val_macro_f1': 0.6774, 'val_accuracy': 0.68, 'final_train_loss': 0.7978, 'loss_evaluations': 300, 'gradient_evaluations': None, 'iterations': 150, 'seconds': 99.7}
+{'feature_map': 'zz', 'seed': 1, 'optimizer': 'L-BFGS-B', 'val_macro_f1': 0.664, 'val_accuracy': 0.666, 'final_train_loss': 0.7973, 'loss_evaluations': 35, 'gradient_evaluations': 35, 'iterations': 13, 'seconds': 374.3}
+{'feature_map': 'ry', 'seed': 2, 'optimizer': 'COBYLA', 'val_macro_f1': 0.7459, 'val_accuracy': 0.751, 'final_train_loss': 0.7477, 'loss_evaluations': np.int64(300), 'gradient_evaluations': None, 'iterations': None, 'seconds': 56.0}
+{'feature_map': 'ry', 'seed': 2, 'optimizer': 'SPSA', 'val_macro_f1': 0.734, 'val_accuracy': 0.746, 'final_train_loss': 0.7651, 'loss_evaluations': 300, 'gradient_evaluations': None, 'iterations': 150, 'seconds': 299.3}
+{'feature_map': 'ry', 'seed': 2, 'optimizer': 'L-BFGS-B', 'val_macro_f1': 0.7534, 'val_accuracy': 0.761, 'final_train_loss': 0.7366, 'loss_evaluations': 41, 'gradient_evaluations': 41, 'iterations': 24, 'seconds': 286.4}
+{'feature_map': 'zz', 'seed': 2, 'optimizer': 'COBYLA', 'val_macro_f1': 0.6179, 'val_accuracy': 0.626, 'final_train_loss': 0.9062, 'loss_evaluations': np.int64(300), 'gradient_evaluations': None, 'iterations': None, 'seconds': 85.5}
+{'feature_map': 'zz', 'seed': 2, 'optimizer': 'SPSA', 'val_macro_f1': 0.5995, 'val_accuracy': 0.617, 'final_train_loss': 0.9092, 'loss_evaluations': 300, 'gradient_evaluations': None, 'iterations': 150, 'seconds': 99.8}
+{'feature_map': 'zz', 'seed': 2, 'optimizer': 'L-BFGS-B', 'val_macro_f1': 0.6875, 'val_accuracy': 0.692, 'final_train_loss': 0.8832, 'loss_evaluations': 32, 'gradient_evaluations': 32, 'iterations': 19, 'seconds': 342.7}
+
+            f1_mean  f1_std  loss_mean  seconds_mean  evaluations_mean
+optimizer                                                            
+L-BFGS-B    0.7091  0.0653     0.7670      287.3667           32.3333
+COBYLA      0.6955  0.0691     0.7649       71.5833          300.0000
+SPSA        0.6942  0.0550     0.7861      122.8833          300.0000
+
+per feature map:
+ feature_map      ry      zz
+optimizer                  
+COBYLA       0.7569  0.6341
+L-BFGS-B     0.7635  0.6547
+SPSA         0.7363  0.6521

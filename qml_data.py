@@ -12,9 +12,11 @@ from sklearn.decomposition import PCA
 from sklearn.feature_selection import mutual_info_classif
 from sklearn.preprocessing import StandardScaler
 
+
 OUT = "prepared"
 FEAT = json.load(open(f"{OUT}/features.json"))
 KEPT, LOG_COLS = FEAT["kept"], FEAT["log1p"]
+MI_MAX_CORR = 0.95   # MI selection skips features with |Spearman rho| >= this to an already selected one
 NEG_TO_ZERO = FEAT.get("negative_to_zero", [])
 N_TEST_PER_CLASS = json.load(open(f"{OUT}/pools/pool_config.json"))["test_per_family"]
 
@@ -95,9 +97,9 @@ def load_scenario(scenario, n_train_per_class, seed, strategy="random"):
     return pd.concat(train, ignore_index=True), pd.concat(test, ignore_index=True), classes
 
 
-def to_qubits(train, test, reducer="pca", n_qubits=4, clip_pct=(1, 99), seed=42):
+def to_qubits(train, test, reducer="pca", n_qubits=4, clip_pct=(1, 99), angle_max=np.pi, seed=42):
     """Feature pipeline. Every step is fitted on the TRAINING set only, then applied to test:
-    log1p (rule 7) -> standardise -> reduce to n_qubits (PCA or MI) -> angle scale to [0, pi]."""
+    log1p (rule 7) -> standardise -> reduce to n_qubits (PCA or MI) -> angle scale to [0, angle_max]."""
     Xtr = train[KEPT].astype("float64").copy()
     Xte = test[KEPT].astype("float64").copy()
     Xtr[NEG_TO_ZERO] = Xtr[NEG_TO_ZERO].clip(lower=0)   # Rule 8
@@ -122,13 +124,28 @@ def to_qubits(train, test, reducer="pca", n_qubits=4, clip_pct=(1, 99), seed=42)
         info["loadings"] = pd.DataFrame(pca.components_.T, index=cols,
                                         columns=[f"PC{i+1}" for i in range(n_qubits)])
     elif reducer == "mi":
-        # Supervised: keeps the n_qubits original features with the highest mutual
-        # information with the class label. Interpretable: the qubits ARE named features.
+        # Supervised: rank features by mutual information with the class label, then pick
+        # greedily from the top, skipping any feature strongly correlated with one already
+        # chosen, so each qubit carries different information (mRMR idea, Peng et al. 2005).
         mi = mutual_info_classif(Ztr, y_tr, random_state=seed)
-        top = np.argsort(mi)[::-1][:n_qubits]
+        rho = np.abs(pd.DataFrame(Ztr).corr(method="spearman").to_numpy())
+        order = np.argsort(mi)[::-1]
+        top = []
+        for j in order:
+            if all(rho[j, t] < MI_MAX_CORR for t in top):
+                top.append(j)
+            if len(top) == n_qubits:
+                break
+        for j in order:                      # fallback: too few non-redundant features
+            if len(top) == n_qubits:
+                break
+            if j not in top:
+                top.append(j)
+        top = np.array(top)
         Ztr, Zte = Ztr[:, top], Zte[:, top]
         info["features"] = list(cols[top])
         info["mi_scores"] = [float(mi[i]) for i in top]
+        info["mi_max_corr"] = MI_MAX_CORR
     else:
         raise ValueError("reducer must be 'pca' or 'mi'")
 
@@ -140,13 +157,15 @@ def to_qubits(train, test, reducer="pca", n_qubits=4, clip_pct=(1, 99), seed=42)
     flat = hi <= lo
     lo[flat], hi[flat] = Ztr[:, flat].min(axis=0), Ztr[:, flat].max(axis=0)
     span = np.where(hi > lo, hi - lo, 1.0)
-    Ztr = np.pi * np.clip((Ztr - lo) / span, 0, 1)
-    Zte = np.pi * np.clip((Zte - lo) / span, 0, 1)
+    Ztr = angle_max * np.clip((Ztr - lo) / span, 0, 1)
+    Zte = angle_max * np.clip((Zte - lo) / span, 0, 1)
     info["clip_percentiles"] = clip_pct
+    info["angle_max"] = angle_max
     return Ztr, Zte, y_tr, test["y"].to_numpy(), info
 
 
 if __name__ == "__main__":
+    print("Rule 8 applied to:", NEG_TO_ZERO, "| IAT log1p:", "IAT" in LOG_COLS)
     # Self-check: every scenario builds, values are in [0, pi], sets are balanced and nested.
     for sc in SCENARIOS:
         tr, te, classes = load_scenario(sc, n_train_per_class=100, seed=0)
@@ -160,3 +179,18 @@ if __name__ == "__main__":
     small, _, _ = load_scenario("DDoS", 50, 0)
     large, _, _ = load_scenario("DDoS", 100, 0)
     print("nested training sets:", set(small.row_id) <= set(large.row_id))
+
+def load_validation(scenario, n_per_class, exclude_row_ids, seed=12345):
+    """Validation set for tuning decisions (optimizer, ansatz, depth).
+    Drawn from the TRAINING pools, so the test set is never used for any choice; rows in
+    `exclude_row_ids` (the training sample) are excluded, so validation is disjoint from it."""
+    exclude = set(exclude_row_ids)
+    classes = scenario_classes(scenario)
+    parts = []
+    for y, cls in enumerate(classes):
+        fams = ATTACKS if cls == "Attack" else [cls]
+        for fam, k in zip(fams, _split_evenly(n_per_class, len(fams))):
+            pool = _pool("train", fam)
+            pool = pool[~pool["row_id"].isin(exclude)]
+            parts.append(pool.sample(n=k, random_state=seed).assign(y=y))
+    return pd.concat(parts, ignore_index=True), classes

@@ -1,0 +1,26 @@
+{
+  "pilot": {
+    "scenario": "benign_vs_attack",
+    "n_classes": 2,
+    "feature_maps": [
+      "ry",
+      "zz"
+    ],
+    "ansatz": "real_amplitudes",
+    "reps": 2,
+    "n_qubits": 4,
+    "reducer": "pca",
+    "n_train_per_class": 100,
+    "n_val_per_class": 500,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "maxiter": {
+    "COBYLA": 300,
+    "SPSA": 150,
+    "L-BFGS-B": 100
+  }
+}

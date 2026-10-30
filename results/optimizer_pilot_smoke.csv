@@ -1,0 +1,7 @@
+feature_map,seed,optimizer,val_macro_f1,val_accuracy,final_train_loss,loss_evaluations,gradient_evaluations,iterations,seconds
+ry,0,COBYLA,0.8,0.8,0.5023,30,,,1.6
+ry,0,SPSA,0.8496,0.85,0.5997,30,,15,4.1
+ry,0,L-BFGS-B,0.8,0.8,0.4856,8,8,5,6.0
+zz,0,COBYLA,0.6,0.6,0.8109,30,,,1.2
+zz,0,SPSA,0.6267,0.65,0.8455,30,,15,2.7
+zz,0,L-BFGS-B,0.697,0.7,0.7165,7,7,5,8.3
