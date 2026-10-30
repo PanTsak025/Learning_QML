@@ -1,0 +1,4 @@
+{
+  "train_candidates_per_family": 20000,
+  "test_per_family": 1000
+}

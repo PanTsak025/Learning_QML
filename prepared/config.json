@@ -1,0 +1,16 @@
+{
+  "config": {
+    "seed": 42,
+    "label_col": "Label",
+    "test_hash_modulus": 5,
+    "analysis_rows_per_family_per_file": 500,
+    "redundancy_spearman_threshold": 0.999
+  },
+  "versions": {
+    "python": "3.14.8",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "platform": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43"
+  }
+}
