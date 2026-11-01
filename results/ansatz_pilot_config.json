@@ -1,0 +1,44 @@
+{
+  "scenario": "benign_vs_attack",
+  "n_classes": 2,
+  "feature_maps": [
+    "ry",
+    "zz"
+  ],
+  "ansatz_candidates": [
+    [
+      "real_amplitudes",
+      1
+    ],
+    [
+      "real_amplitudes",
+      2
+    ],
+    [
+      "real_amplitudes",
+      3
+    ],
+    [
+      "efficient_su2",
+      1
+    ],
+    [
+      "efficient_su2",
+      2
+    ],
+    [
+      "efficient_su2",
+      3
+    ]
+  ],
+  "n_qubits": 4,
+  "reducer": "pca",
+  "n_train_per_class": 100,
+  "n_val_per_class": 500,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "evals_per_parameter": 25
+}

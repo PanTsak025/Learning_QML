@@ -1,0 +1,7 @@
+config,val_f1_mean,mean_gap_to_best,se_of_gap,equivalent_to_best,effective_parameters,train_f1_mean,seconds_mean
+efficient_su2_r3,0.7372,0.0,0.0,True,28,0.7712,325.2833
+efficient_su2_r2,0.7246,0.0126,0.0141,True,20,0.758,172.0333
+real_amplitudes_r3,0.7123,0.025,0.0153,False,16,0.7506,104.7833
+efficient_su2_r1,0.6994,0.0379,0.0128,False,12,0.7176,207.9167
+real_amplitudes_r1,0.6979,0.0393,0.013,False,8,0.7061,374.5333
+real_amplitudes_r2,0.6955,0.0417,0.0181,False,12,0.7135,71.6833
