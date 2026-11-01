@@ -1,0 +1,149 @@
+{
+  "model": {
+    "ansatz": "efficient_su2",
+    "reps": 2,
+    "evals_per_parameter": 25
+  },
+  "stages": {
+    "learning_curves": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        25,
+        50,
+        100,
+        200,
+        400,
+        800
+      ],
+      "n_qubits": [
+        4
+      ],
+      "reducer": [
+        "pca"
+      ],
+      "sampling": [
+        "random",
+        "kmeans"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry",
+        "zz"
+      ]
+    },
+    "qubits_features": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        200
+      ],
+      "n_qubits": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "reducer": [
+        "pca",
+        "mi"
+      ],
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry",
+        "zz"
+      ]
+    },
+    "first_look": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        200
+      ],
+      "n_qubits": [
+        4
+      ],
+      "reducer": [
+        "pca"
+      ],
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry",
+        "zz"
+      ]
+    },
+    "smoke": {
+      "scenario": [
+        "Recon",
+        "multiclass"
+      ],
+      "n_train": [
+        10
+      ],
+      "n_qubits": [
+        4
+      ],
+      "reducer": [
+        "pca",
+        "mi"
+      ],
+      "sampling": [
+        "random",
+        "kmeans"
+      ],
+      "seed": [
+        0
+      ],
+      "feature_maps": [
+        "ry",
+        "zz"
+      ]
+    }
+  },
+  "n_val_per_class": 500
+}

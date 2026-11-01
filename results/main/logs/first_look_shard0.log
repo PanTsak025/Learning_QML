@@ -1,0 +1,30 @@
+nohup: ignoring input
+shard 0/8: 4 tasks
+--- [1/4] DDoS_n200_q4_pca_random_s0
+{'task': 'DDoS_n200_q4_pca_random_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.9855, 'val_macro_f1': 0.988, 'seconds': 455.1}
+{'task': 'DDoS_n200_q4_pca_random_s0', 'model': 'VQC-ZZ', 'test_macro_f1': 0.8699, 'val_macro_f1': 0.8827, 'seconds': 3031.0}
+{'task': 'DDoS_n200_q4_pca_random_s0', 'model': 'LogReg', 'test_macro_f1': 0.9975, 'val_macro_f1': 0.995, 'seconds': 0.0}
+{'task': 'DDoS_n200_q4_pca_random_s0', 'model': 'SVM-RBF', 'test_macro_f1': 0.997, 'val_macro_f1': 0.995, 'seconds': 0.0}
+{'task': 'DDoS_n200_q4_pca_random_s0', 'model': 'RF', 'test_macro_f1': 0.995, 'val_macro_f1': 0.991, 'seconds': 1.2}
+{'task': 'DDoS_n200_q4_pca_random_s0', 'model': 'RF-all33', 'test_macro_f1': 0.999, 'val_macro_f1': 0.998, 'seconds': 1.1}
+--- [2/4] Mirai_n200_q4_pca_random_s2
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'VQC-RY', 'test_macro_f1': 0.996, 'val_macro_f1': 0.995, 'seconds': 801.2}
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'VQC-ZZ', 'test_macro_f1': 0.8822, 'val_macro_f1': 0.8587, 'seconds': 2237.1}
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'LogReg', 'test_macro_f1': 0.9945, 'val_macro_f1': 0.996, 'seconds': 0.0}
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'SVM-RBF', 'test_macro_f1': 0.9955, 'val_macro_f1': 0.997, 'seconds': 0.0}
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'RF', 'test_macro_f1': 0.9945, 'val_macro_f1': 0.996, 'seconds': 0.5}
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'RF-all33', 'test_macro_f1': 0.998, 'val_macro_f1': 0.997, 'seconds': 0.5}
+--- [3/4] BruteForce_n200_q4_pca_random_s1
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'model': 'VQC-RY', 'test_macro_f1': 0.7213, 'val_macro_f1': 0.7278, 'seconds': 384.2}
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'model': 'VQC-ZZ', 'test_macro_f1': 0.6133, 'val_macro_f1': 0.6169, 'seconds': 657.1}
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'model': 'LogReg', 'test_macro_f1': 0.7095, 'val_macro_f1': 0.7317, 'seconds': 0.0}
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'model': 'SVM-RBF', 'test_macro_f1': 0.7231, 'val_macro_f1': 0.7389, 'seconds': 0.0}
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'model': 'RF', 'test_macro_f1': 0.7097, 'val_macro_f1': 0.7259, 'seconds': 0.6}
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'model': 'RF-all33', 'test_macro_f1': 0.7909, 'val_macro_f1': 0.819, 'seconds': 0.6}
+--- [4/4] multiclass_n200_q4_pca_random_s0
+{'task': 'multiclass_n200_q4_pca_random_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.405, 'val_macro_f1': 0.4051, 'seconds': 4460.7}
+{'task': 'multiclass_n200_q4_pca_random_s0', 'model': 'VQC-ZZ', 'test_macro_f1': 0.2782, 'val_macro_f1': 0.2795, 'seconds': 1785.3}
+{'task': 'multiclass_n200_q4_pca_random_s0', 'model': 'LogReg', 'test_macro_f1': 0.5145, 'val_macro_f1': 0.5103, 'seconds': 0.1}
+{'task': 'multiclass_n200_q4_pca_random_s0', 'model': 'SVM-RBF', 'test_macro_f1': 0.5815, 'val_macro_f1': 0.5803, 'seconds': 0.7}
+{'task': 'multiclass_n200_q4_pca_random_s0', 'model': 'RF', 'test_macro_f1': 0.5748, 'val_macro_f1': 0.5876, 'seconds': 1.3}
+{'task': 'multiclass_n200_q4_pca_random_s0', 'model': 'RF-all33', 'test_macro_f1': 0.6928, 'val_macro_f1': 0.7116, 'seconds': 1.3}
