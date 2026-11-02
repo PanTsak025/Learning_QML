@@ -1,0 +1,10 @@
+,scenario,best_by_val,chosen_setting,chosen_val_f1,equivalent_settings
+0,DDoS,MI-2q (0.994),MI-2q,0.994,"MI-2q, MI-6q"
+1,DoS,MI-6q (1.000),MI-6q,1.0,MI-6q
+2,Mirai,MI-4q (0.999),MI-4q,0.999,MI-4q
+3,Recon,,incomplete (22/24 trainings),,
+4,Spoofing,,incomplete (14/24 trainings),,
+5,BruteForce,,incomplete (4/24 trainings),,
+6,Web,,incomplete (3/24 trainings),,
+7,benign_vs_attack,,incomplete (3/24 trainings),,
+8,multiclass,,incomplete (3/18 trainings),,

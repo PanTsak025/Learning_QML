@@ -44,13 +44,13 @@ STAGES = {
     "learning_curves": {
         "scenario": SCENARIOS, "n_train": [25, 50, 100, 200, 400, 800],
         "n_qubits": [4], "reducer": ["pca"], "sampling": ["random", "kmeans"],
-        "seed": [0, 1, 2], "feature_maps": ["ry", "zz"],
+        "seed": [0, 1, 2], "feature_maps": ["ry"],
     },
     # How many qubits/features, and PCA vs MI features, at one fixed training size.
     "qubits_features": {
         "scenario": SCENARIOS, "n_train": [200],
         "n_qubits": [2, 4, 6, 8], "reducer": ["pca", "mi"], "sampling": ["random"],
-        "seed": [0, 1, 2], "feature_maps": ["ry", "zz"],
+        "seed": [0, 1, 2], "feature_maps": ["ry"],
     },
         # First look: every scenario at one setting. Answers "which attacks can QML detect,
     # and how does it compare with classical?" quickly. Shared with both stages above.
@@ -66,9 +66,14 @@ STAGES = {
         "seed": [0], "feature_maps": ["ry", "zz"],
     },
 }
-# Measured in the ansatz pilot: seconds per (sample x loss evaluation), EfficientSU2 r2,
-# 4 qubits. Used only for --plan estimates; assumed to grow linearly with qubits.
-SEC_PER_SAMPLE_EVAL_4Q = {"ry": 0.00118, "zz": 0.00168}
+# ZZ is dropped from the big stages by the rule fixed before looking: in the first look,
+# VQC-RY beat VQC-ZZ on VALIDATION macro-F1 by more than one standard error (paired by
+# seed) in all 9 scenarios. RY vs ZZ is therefore answered by the first_look stage.
+
+# Seconds per (sample x loss evaluation), EfficientSU2 r2, 4 qubits, measured in the
+# first_look stage with 8 shards running in parallel. Used only for --plan estimates and
+# for balancing shards; assumed to grow linearly with qubits.
+SEC_PER_SAMPLE_EVAL_4Q = {"ry": 0.0019, "zz": 0.0027}
 
 
 def tasks_for(stage):
@@ -97,6 +102,17 @@ def estimate_seconds(t, fmaps):
     samples = t["n_train"] * n_classes
     return sum(evals * samples * SEC_PER_SAMPLE_EVAL_4Q[f] * t["n_qubits"] / 4 for f in fmaps)
 
+def assign_shards(tasks, fmaps, nshards):
+    """Longest-task-first balancing: tasks sorted by estimated time (largest first) and each
+    given to the shard with the least work so far, so all shards finish at about the same
+    time. Deterministic (ties broken by task id), so every shard computes the same split."""
+    load = [0.0] * nshards
+    owner = {}
+    for t in sorted(tasks, key=lambda t: (-estimate_seconds(t, fmaps), task_id(t))):
+        k = min(range(nshards), key=lambda i: (load[i], i))
+        owner[task_id(t)] = k
+        load[k] += estimate_seconds(t, fmaps)
+    return owner
 
 def metrics(y_true, y_pred, n_classes):
     """Same keys for every scenario, so all rows share one column layout.
@@ -230,8 +246,12 @@ if __name__ == "__main__":
         hours = sum(estimate_seconds(t, fmaps) for t in todo) / 3600
         print(f"stage '{stage}': {len(tasks)} tasks ({len(tasks) - len(todo)} already done), "
               f"{len(todo) * len(fmaps)} VQC trainings to go")
+        owner = assign_shards(tasks, fmaps, args.nshards)
+        per_shard = [sum(estimate_seconds(t, fmaps) for t in todo if owner[task_id(t)] == k) / 3600
+                     for k in range(args.nshards)]
         print(f"estimated VQC time: {hours:.1f} h on one process "
-              f"-> {hours / max(args.nshards, 1):.1f} h with {args.nshards} parallel shards")
+              f"-> {max(per_shard):.1f} h with {args.nshards} parallel shards "
+              f"(busiest shard; others {min(per_shard):.1f}-{max(per_shard):.1f} h)")
         by_sc = pd.DataFrame([{**t, "hours": estimate_seconds(t, fmaps) / 3600} for t in todo])
         if len(by_sc):
             print(by_sc.groupby("scenario")["hours"].sum().round(1).to_string())
@@ -239,10 +259,10 @@ if __name__ == "__main__":
 
     with open(f"{out_dir}/model_config.json", "w") as fh:
         json.dump({"model": MODEL, "stages": STAGES, "n_val_per_class": N_VAL_PER_CLASS}, fh, indent=2, default=str)
-    # Split the FULL task list (not just the unfinished ones), so a restarted shard keeps
-    # exactly the same tasks and never overlaps with shards that are still running.
+    #Balanced split of the FULL task list”.
     todo_ids = {task_id(t) for t in todo}
-    mine = [t for t in tasks[args.shard::args.nshards] if task_id(t) in todo_ids]
+    owner = assign_shards(tasks, fmaps, args.nshards)
+    mine = [t for t in tasks if owner[task_id(t)] == args.shard and task_id(t) in todo_ids]
     out_csv = f"{out_dir}/runs_{stage}_shard{args.shard}of{args.nshards}.csv"
     print(f"shard {args.shard}/{args.nshards}: {len(mine)} tasks")
     for i, t in enumerate(mine, 1):
