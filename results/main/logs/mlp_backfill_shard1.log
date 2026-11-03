@@ -1,0 +1,48 @@
+nohup: ignoring input
+shard 1/8: 23 tasks
+--- [1/23] DDoS_n200_q4_mi_random_s1
+{'task': 'DDoS_n200_q4_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+--- [2/23] DDoS_n200_q6_pca_random_s0
+{'task': 'DDoS_n200_q6_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.996, 'val_macro_f1': 0.996, 'seconds': 0.0}
+--- [3/23] DDoS_n200_q8_pca_random_s2
+{'task': 'DDoS_n200_q8_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.9955, 'val_macro_f1': 0.998, 'seconds': 0.0}
+--- [4/23] DoS_n200_q4_pca_random_s0
+{'task': 'DoS_n200_q4_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.995, 'val_macro_f1': 0.994, 'seconds': 0.0}
+--- [5/23] DoS_n200_q6_pca_random_s2
+{'task': 'DoS_n200_q6_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.9965, 'val_macro_f1': 0.997, 'seconds': 0.0}
+--- [6/23] Mirai_n200_q4_pca_random_s2
+{'task': 'Mirai_n200_q4_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.996, 'val_macro_f1': 0.997, 'seconds': 0.0}
+--- [7/23] Mirai_n200_q8_mi_random_s1
+{'task': 'Mirai_n200_q8_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+--- [8/23] Recon_n200_q2_pca_random_s2
+{'task': 'Recon_n200_q2_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7258, 'val_macro_f1': 0.7512, 'seconds': 0.1}
+--- [9/23] Recon_n200_q6_mi_random_s1
+{'task': 'Recon_n200_q6_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7628, 'val_macro_f1': 0.792, 'seconds': 0.3}
+--- [10/23] Recon_n200_q8_pca_random_s0
+{'task': 'Recon_n200_q8_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.7333, 'val_macro_f1': 0.7614, 'seconds': 0.3}
+--- [11/23] Spoofing_n200_q4_mi_random_s1
+{'task': 'Spoofing_n200_q4_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.8286, 'val_macro_f1': 0.8459, 'seconds': 0.8}
+--- [12/23] Spoofing_n200_q6_pca_random_s0
+{'task': 'Spoofing_n200_q6_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.5914, 'val_macro_f1': 0.586, 'seconds': 0.2}
+--- [13/23] Spoofing_n200_q8_pca_random_s2
+{'task': 'Spoofing_n200_q8_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.6662, 'val_macro_f1': 0.6695, 'seconds': 0.5}
+--- [14/23] BruteForce_n200_q4_mi_random_s1
+{'task': 'BruteForce_n200_q4_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7048, 'val_macro_f1': 0.738, 'seconds': 0.5}
+--- [15/23] BruteForce_n200_q6_mi_random_s1
+{'task': 'BruteForce_n200_q6_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.732, 'val_macro_f1': 0.7549, 'seconds': 0.4}
+--- [16/23] BruteForce_n200_q8_pca_random_s0
+{'task': 'BruteForce_n200_q8_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.7274, 'val_macro_f1': 0.7441, 'seconds': 0.5}
+--- [17/23] Web_n200_q2_mi_random_s1
+{'task': 'Web_n200_q2_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7085, 'val_macro_f1': 0.731, 'seconds': 0.2}
+--- [18/23] Web_n200_q4_pca_random_s0
+{'task': 'Web_n200_q4_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.6682, 'val_macro_f1': 0.7035, 'seconds': 0.3}
+--- [19/23] Web_n200_q6_pca_random_s2
+{'task': 'Web_n200_q6_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7124, 'val_macro_f1': 0.7379, 'seconds': 0.9}
+--- [20/23] benign_vs_attack_n200_q2_pca_random_s0
+{'task': 'benign_vs_attack_n200_q2_pca_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.6956, 'val_macro_f1': 0.704, 'seconds': 0.0}
+--- [21/23] benign_vs_attack_n200_q4_pca_random_s2
+{'task': 'benign_vs_attack_n200_q4_pca_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.779, 'val_macro_f1': 0.8157, 'seconds': 0.1}
+--- [22/23] benign_vs_attack_n200_q8_mi_random_s1
+{'task': 'benign_vs_attack_n200_q8_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7951, 'val_macro_f1': 0.8094, 'seconds': 0.5}
+--- [23/23] multiclass_n200_q8_mi_random_s1
+{'task': 'multiclass_n200_q8_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.4239, 'val_macro_f1': 0.4314, 'seconds': 2.8}

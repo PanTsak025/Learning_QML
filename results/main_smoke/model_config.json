@@ -41,8 +41,7 @@
         2
       ],
       "feature_maps": [
-        "ry",
-        "zz"
+        "ry"
       ]
     },
     "qubits_features": {
@@ -69,6 +68,39 @@
       "reducer": [
         "pca",
         "mi"
+      ],
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry"
+      ]
+    },
+    "first_look": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        200
+      ],
+      "n_qubits": [
+        4
+      ],
+      "reducer": [
+        "pca"
       ],
       "sampling": [
         "random"

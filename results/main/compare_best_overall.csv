@@ -1,0 +1,10 @@
+scenario,best_quantum,best_classical (same-feature),difference (Q-C),RF all 33 (ceiling)
+DDoS,0.988±0.011  VQC-RY MI-2q,0.999±0.000  LogReg MI-2q,-0.011,0.999
+DoS,0.999±0.000  VQC-RY MI-6q,1.000±0.000  LogReg MI-2q,-0.001,1.0
+Mirai,0.999±0.000  VQC-RY MI-4q,0.999±0.000  LogReg MI-8q,+0.000,0.998
+Recon,0.772±0.000  VQC-RY PCA-4q,0.768±0.005  RF MI-8q,+0.005,0.778
+Spoofing,0.658±0.009  VQC-RY PCA-6q,0.876±0.003  RF MI-8q,-0.218,0.872
+BruteForce,0.722±0.007  VQC-RY PCA-6q,0.766±0.008  RF MI-8q,-0.044,0.789
+Web,0.716±0.009  VQC-RY MI-6q,0.767±0.001  SVM-RBF MI-8q,-0.051,0.774
+benign_vs_attack,0.756±0.012  VQC-RY MI-6q,0.803±0.008  RF MI-6q,-0.046,0.827
+multiclass,0.359±0.041  VQC-RY MI-4q,0.619±0.007  RF MI-8q,-0.259,0.69

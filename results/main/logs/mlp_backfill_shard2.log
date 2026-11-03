@@ -1,0 +1,54 @@
+nohup: ignoring input
+shard 2/8: 26 tasks
+--- [1/26] DDoS_n200_q2_mi_random_s0
+{'task': 'DDoS_n200_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+--- [2/26] DDoS_n200_q4_mi_random_s2
+{'task': 'DDoS_n200_q4_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+--- [3/26] DDoS_n200_q6_pca_random_s1
+{'task': 'DDoS_n200_q6_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.996, 'val_macro_f1': 0.993, 'seconds': 0.0}
+--- [4/26] DoS_n200_q2_mi_random_s0
+{'task': 'DoS_n200_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+--- [5/26] DoS_n200_q4_pca_random_s1
+{'task': 'DoS_n200_q4_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.992, 'val_macro_f1': 0.996, 'seconds': 0.0}
+--- [6/26] DoS_n200_q8_mi_random_s0
+{'task': 'DoS_n200_q8_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.9985, 'val_macro_f1': 0.999, 'seconds': 0.0}
+--- [7/26] Mirai_n200_q2_mi_random_s0
+{'task': 'Mirai_n200_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.9985, 'val_macro_f1': 0.999, 'seconds': 0.0}
+--- [8/26] Mirai_n200_q6_mi_random_s0
+{'task': 'Mirai_n200_q6_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.999, 'val_macro_f1': 0.998, 'seconds': 0.0}
+--- [9/26] Mirai_n200_q8_mi_random_s2
+{'task': 'Mirai_n200_q8_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.999, 'val_macro_f1': 0.998, 'seconds': 0.0}
+--- [10/26] Recon_n200_q2_mi_random_s0
+{'task': 'Recon_n200_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.7583, 'val_macro_f1': 0.7732, 'seconds': 0.1}
+--- [11/26] Recon_n200_q4_mi_random_s0
+{'task': 'Recon_n200_q4_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.7387, 'val_macro_f1': 0.7511, 'seconds': 0.2}
+--- [12/26] Recon_n200_q6_mi_random_s2
+{'task': 'Recon_n200_q6_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7398, 'val_macro_f1': 0.7609, 'seconds': 0.3}
+--- [13/26] Recon_n200_q8_pca_random_s1
+{'task': 'Recon_n200_q8_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7689, 'val_macro_f1': 0.7999, 'seconds': 0.9}
+--- [14/26] Spoofing_n200_q2_mi_random_s2
+{'task': 'Spoofing_n200_q2_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7903, 'val_macro_f1': 0.8097, 'seconds': 0.2}
+--- [15/26] Spoofing_n200_q4_mi_random_s2
+{'task': 'Spoofing_n200_q4_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7406, 'val_macro_f1': 0.7551, 'seconds': 0.6}
+--- [16/26] Spoofing_n200_q6_pca_random_s1
+{'task': 'Spoofing_n200_q6_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.66, 'val_macro_f1': 0.6598, 'seconds': 0.2}
+--- [17/26] BruteForce_n200_q2_mi_random_s0
+{'task': 'BruteForce_n200_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.6765, 'val_macro_f1': 0.6906, 'seconds': 0.0}
+--- [18/26] BruteForce_n200_q4_mi_random_s2
+{'task': 'BruteForce_n200_q4_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7263, 'val_macro_f1': 0.7639, 'seconds': 0.6}
+--- [19/26] BruteForce_n200_q6_mi_random_s2
+{'task': 'BruteForce_n200_q6_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7279, 'val_macro_f1': 0.7654, 'seconds': 0.3}
+--- [20/26] BruteForce_n200_q8_pca_random_s1
+{'task': 'BruteForce_n200_q8_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7398, 'val_macro_f1': 0.7236, 'seconds': 0.5}
+--- [21/26] Web_n200_q2_pca_random_s1
+{'task': 'Web_n200_q2_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.6875, 'val_macro_f1': 0.7078, 'seconds': 0.1}
+--- [22/26] Web_n200_q4_pca_random_s1
+{'task': 'Web_n200_q4_pca_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.7268, 'val_macro_f1': 0.7543, 'seconds': 0.8}
+--- [23/26] Web_n200_q8_mi_random_s0
+{'task': 'Web_n200_q8_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.7541, 'val_macro_f1': 0.756, 'seconds': 0.2}
+--- [24/26] benign_vs_attack_n200_q6_mi_random_s0
+{'task': 'benign_vs_attack_n200_q6_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.768, 'val_macro_f1': 0.7769, 'seconds': 0.8}
+--- [25/26] benign_vs_attack_n200_q8_mi_random_s2
+{'task': 'benign_vs_attack_n200_q8_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.7671, 'val_macro_f1': 0.7925, 'seconds': 0.2}
+--- [26/26] multiclass_n200_q8_mi_random_s2
+{'task': 'multiclass_n200_q8_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.4542, 'val_macro_f1': 0.4677, 'seconds': 2.6}

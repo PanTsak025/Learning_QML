@@ -24,7 +24,7 @@ tasks, fmaps = tasks_for(args.stage)
 ids = {task_id(t) for t in tasks}
 res = runs[runs["task"].isin(ids)].drop_duplicates(["task", "model"])
 
-models = [f"VQC-{f.upper()}" for f in fmaps] + ["LogReg", "SVM-RBF", "RF", "RF-all33"]
+models = [f"VQC-{f.upper()}" for f in fmaps] + ["LogReg", "SVM-RBF", "RF","MLP-matched", "RF-all33"]
 expected = len(ids) * len(models)
 print(f"stage '{args.stage}': {len(res)} of {expected} rows present"
       + ("" if len(res) == expected else "  <-- INCOMPLETE, tables are partial"))

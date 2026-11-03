@@ -1,0 +1,31 @@
+nohup: ignoring input
+shard 1/8: 36 tasks
+--- [1/36] DDoS_n25_q2_mi_random_s2
+{'task': 'DDoS_n25_q2_mi_random_s2', 'model': 'VQC-RY', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 5.3}
+{'task': 'DDoS_n25_q2_mi_random_s2', 'model': 'LogReg', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n25_q2_mi_random_s2', 'model': 'SVM-RBF', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n25_q2_mi_random_s2', 'model': 'RF', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.4}
+{'task': 'DDoS_n25_q2_mi_random_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n25_q2_mi_random_s2', 'model': 'RF-all33', 'test_macro_f1': 0.996, 'val_macro_f1': 0.995, 'seconds': 0.4}
+--- [2/36] DDoS_n50_q2_mi_random_s0
+{'task': 'DDoS_n50_q2_mi_random_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.9093, 'val_macro_f1': 0.9276, 'seconds': 20.8}
+{'task': 'DDoS_n50_q2_mi_random_s0', 'model': 'LogReg', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n50_q2_mi_random_s0', 'model': 'SVM-RBF', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n50_q2_mi_random_s0', 'model': 'RF', 'test_macro_f1': 0.992, 'val_macro_f1': 0.995, 'seconds': 0.5}
+{'task': 'DDoS_n50_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n50_q2_mi_random_s0', 'model': 'RF-all33', 'test_macro_f1': 0.9975, 'val_macro_f1': 0.995, 'seconds': 0.5}
+--- [3/36] DDoS_n100_q2_mi_kmeans_s1
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'model': 'VQC-RY', 'test_macro_f1': 0.995, 'val_macro_f1': 1.0, 'seconds': 43.1}
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'model': 'LogReg', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'model': 'SVM-RBF', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'model': 'RF', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.4}
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.1}
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'model': 'RF-all33', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.5}
+--- [4/36] DDoS_n400_q2_mi_random_s0
+{'task': 'DDoS_n400_q2_mi_random_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.9685, 'val_macro_f1': 0.979, 'seconds': 165.3}
+{'task': 'DDoS_n400_q2_mi_random_s0', 'model': 'LogReg', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n400_q2_mi_random_s0', 'model': 'SVM-RBF', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n400_q2_mi_random_s0', 'model': 'RF', 'test_macro_f1': 0.999, 'val_macro_f1': 0.999, 'seconds': 0.5}
+{'task': 'DDoS_n400_q2_mi_random_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n400_q2_mi_random_s0', 'model': 'RF-all33', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.6}
+--- [5/36] DDoS_n800_q2_mi_kmeans_s1

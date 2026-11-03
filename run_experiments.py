@@ -1,4 +1,6 @@
 """Main experiments: VQC (RY and ZZ encodings) and classical baselines on every scenario.
+Classical baselines (all on the SAME features and samples as the VQC): LogReg, SVM-RBF, RF,
+MLP-matched (about as many parameters as the VQC); plus RF-all33 (all 33 features, ceiling).
 
     python run_experiments.py --stage learning_curves --plan          # count runs, estimate hours
     python run_experiments.py --smoke                                  # 2-3 minute check
@@ -30,7 +32,7 @@ from qml_data import SCENARIOS, scenario_classes, load_scenario, load_validation
 from feature_maps import ANGLE_MAX
 from ansatz import build_ansatz
 from vqc_model import build_vqc
-from baselines import CANDIDATES, all_features, fit_tuned
+from baselines import CANDIDATES, all_features, fit_tuned, fit_matched_mlp
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -41,18 +43,25 @@ N_VAL_PER_CLASS = 500
 STAGES = {
     # Core question: how does performance grow with training size, per attack scenario,
     # and does representative (k-means) sampling beat random sampling?
+    # One (n_qubits, reducer) per scenario, chosen from qubits_features by the paired
+    # one-standard-error rule on VALIDATION macro-F1, at most 6 qubits, fewest qubits first
+    # (results/main/summary_qubits_features_choice.csv).
     "learning_curves": {
         "scenario": SCENARIOS, "n_train": [25, 50, 100, 200, 400, 800],
-        "n_qubits": [4], "reducer": ["pca"], "sampling": ["random", "kmeans"],
-        "seed": [0, 1, 2], "feature_maps": ["ry"],
+        "settings": {
+            "DDoS": (2, "mi"), "DoS": (2, "mi"), "Mirai": (2, "mi"), "Recon": (2, "mi"),
+            "Spoofing": (4, "pca"), "BruteForce": (4, "pca"), "Web": (6, "pca"),
+            "benign_vs_attack": (2, "pca"), "multiclass": (4, "pca"),
+        },
+        "sampling": ["random", "kmeans"], "seed": [0, 1, 2], "feature_maps": ["ry"],
     },
     # How many qubits/features, and PCA vs MI features, at one fixed training size.
     "qubits_features": {
         "scenario": SCENARIOS, "n_train": [200],
         "n_qubits": [2, 4, 6, 8], "reducer": ["pca", "mi"], "sampling": ["random"],
-        "seed": [0, 1, 2], "feature_maps": ["ry"],
+        "seed": [0, 1, 2], "feature_maps": ["ry"],   # ZZ dropped: see note below STAGES
     },
-        # First look: every scenario at one setting. Answers "which attacks can QML detect,
+    # First look: every scenario at one setting. Answers "which attacks can QML detect,
     # and how does it compare with classical?" quickly. Shared with both stages above.
     "first_look": {
         "scenario": SCENARIOS, "n_train": [200],
@@ -72,15 +81,29 @@ STAGES = {
 
 # Seconds per (sample x loss evaluation), EfficientSU2 r2, 4 qubits, measured in the
 # first_look stage with 8 shards running in parallel. Used only for --plan estimates and
-# for balancing shards; assumed to grow linearly with qubits.
+# for balancing shards.
 SEC_PER_SAMPLE_EVAL_4Q = {"ry": 0.0019, "zz": 0.0027}
+# Cost per sample-evaluation relative to 4 qubits, MEASURED (statevector simulation:
+# 1.21 / 2.60 / 5.83 / 16.63 ms at 2 / 4 / 6 / 8 qubits). Replaces the earlier linear
+# assumption, which underestimated 8 qubits about 3x.
+QUBIT_COST_FACTOR = {2: 0.47, 4: 1.0, 6: 2.24, 8: 6.40}
+
+# Every model trained in each task (used for resume checks and summaries).
+CLASSICAL_MODELS = list(CANDIDATES) + ["MLP-matched", "RF-all33"]
 
 
 def tasks_for(stage):
+    """All tasks of a stage. A stage either takes the full product of n_qubits x reducer,
+    or (key "settings") one fixed (n_qubits, reducer) per scenario."""
     g = STAGES[stage]
     out = []
-    for sc, n, q, red, samp, seed in product(g["scenario"], g["n_train"], g["n_qubits"],
-                                             g["reducer"], g["sampling"], g["seed"]):
+    if "settings" in g:
+        combos = [(sc, n, g["settings"][sc][0], g["settings"][sc][1], samp, seed)
+                  for sc, n, samp, seed in product(g["scenario"], g["n_train"], g["sampling"], g["seed"])]
+    else:
+        combos = product(g["scenario"], g["n_train"], g["n_qubits"], g["reducer"],
+                         g["sampling"], g["seed"])
+    for sc, n, q, red, samp, seed in combos:
         if len(scenario_classes(sc)) == 8 and q < 3:
             continue   # 8 classes need 3 readout qubits (see vqc_model.readout)
         out.append({"scenario": sc, "n_train": n, "n_qubits": q, "reducer": red,
@@ -100,7 +123,9 @@ def estimate_seconds(t, fmaps):
     n_classes = len(scenario_classes(t["scenario"]))
     evals = MODEL["evals_per_parameter"] * vqc_parameters(t["n_qubits"])
     samples = t["n_train"] * n_classes
-    return sum(evals * samples * SEC_PER_SAMPLE_EVAL_4Q[f] * t["n_qubits"] / 4 for f in fmaps)
+    return sum(evals * samples * SEC_PER_SAMPLE_EVAL_4Q[f] * QUBIT_COST_FACTOR[t["n_qubits"]]
+               for f in fmaps)
+
 
 def assign_shards(tasks, fmaps, nshards):
     """Longest-task-first balancing: tasks sorted by estimated time (largest first) and each
@@ -113,6 +138,7 @@ def assign_shards(tasks, fmaps, nshards):
         owner[task_id(t)] = k
         load[k] += estimate_seconds(t, fmaps)
     return owner
+
 
 def metrics(y_true, y_pred, n_classes):
     """Same keys for every scenario, so all rows share one column layout.
@@ -136,7 +162,7 @@ METRIC_KEYS = ["macro_f1", "accuracy", "detection_rate", "false_alarm_rate",
                "per_class_recall", "confusion_matrix"]
 # Fixed column order for every row, whatever the model or scenario.
 COLUMNS = (["task", "scenario", "n_train", "n_qubits", "reducer", "sampling", "seed", "model",
-            "seconds"]
+            "seconds", "cpu_seconds"]
            + [f"test_{k}" for k in METRIC_KEYS] + [f"val_{k}" for k in METRIC_KEYS]
            + ["train_macro_f1", "final_train_loss", "loss_evaluations", "parameters",
               "features", "pca_explained_variance", "hyperparameter", "weights"])
@@ -150,8 +176,11 @@ def run_task(t, fmaps, done, out_csv, curves_dir):
     val, _ = load_validation(t["scenario"], N_VAL_PER_CLASS, train["row_id"])
     rows = []
 
-    def record(model_name, pred_test, pred_val, seconds, extra=None):
-        row = {"task": tid, **t, "model": model_name, "seconds": round(seconds, 1)}
+    def record(model_name, pred_test, pred_val, seconds, cpu_seconds, extra=None):
+        # seconds = wall clock (includes any sleep / other load); cpu_seconds = CPU time of
+        # this process only (excludes sleep) -> use cpu_seconds for reported training cost.
+        row = {"task": tid, **t, "model": model_name, "seconds": round(seconds, 1),
+               "cpu_seconds": round(cpu_seconds, 1)}
         row.update({f"test_{k}": v for k, v in metrics(test["y"].to_numpy(), pred_test, n_classes).items()})
         row.update({f"val_{k}": v for k, v in metrics(val["y"].to_numpy(), pred_val, n_classes).items()})
         row.update(extra or {})
@@ -174,12 +203,12 @@ def run_task(t, fmaps, done, out_csv, curves_dir):
                         optimizer=COBYLA(maxiter=MODEL["evals_per_parameter"] * n_params),
                         initial_point=np.random.default_rng(t["seed"]).uniform(0, 2 * np.pi, n_params),
                         callback=lambda w, loss: losses.append(round(float(loss), 5)))
-        t0 = time.time()
+        t0, c0 = time.time(), time.process_time()
         vqc.fit(Xtr, ytr)
-        secs = time.time() - t0
+        secs, cpu = time.time() - t0, time.process_time() - c0
         with open(f"{curves_dir}/{tid}_{name}.json", "w") as fh:
             json.dump(losses, fh)
-        record(name, vqc.predict(Xte), vqc.predict(Xval), secs, {
+        record(name, vqc.predict(Xte), vqc.predict(Xval), secs, cpu, {
             "train_macro_f1": round(f1_score(ytr, vqc.predict(Xtr), average="macro"), 4),
             "final_train_loss": round(float(vqc.fit_result.fun), 4),
             "loss_evaluations": int(vqc.fit_result.nfev), "parameters": n_params,
@@ -196,23 +225,36 @@ def run_task(t, fmaps, done, out_csv, curves_dir):
     for name in CANDIDATES:
         if (tid, name) in done:
             continue
-        t0 = time.time()
+        t0, c0 = time.time(), time.process_time()
         model, hp = fit_tuned(name, Xtr, ytr, Xval, yval, t["seed"])
         record(name, model.predict(Xte), model.predict(Xval), time.time() - t0,
-               {"hyperparameter": str(hp)})
+               time.process_time() - c0, {"hyperparameter": str(hp)})
+
+    # ---- Parameter-matched MLP on the SAME features (about as many parameters as the VQC) ----
+    if (tid, "MLP-matched") not in done:
+        t0, c0 = time.time(), time.process_time()
+        model, hp, n_mlp = fit_matched_mlp(Xtr, ytr, Xval, yval, t["seed"], n_classes,
+                                           vqc_parameters(t["n_qubits"]))
+        record("MLP-matched", model.predict(Xte), model.predict(Xval), time.time() - t0,
+               time.process_time() - c0, {"hyperparameter": hp, "parameters": n_mlp})
 
     # ---- Reference: random forest on ALL 33 features (cost of the qubit bottleneck) ----
     if (tid, "RF-all33") not in done:
         Ftr, Fte, Fval = all_features(train, test, val)
-        t0 = time.time()
+        t0, c0 = time.time(), time.process_time()
         model, hp = fit_tuned("RF", Ftr, ytr, Fval, yval, t["seed"])
         record("RF-all33", model.predict(Fte), model.predict(Fval), time.time() - t0,
-               {"hyperparameter": str(hp)})
+               time.process_time() - c0, {"hyperparameter": str(hp)})
 
     if rows:
+        # Never append rows in a different column layout than the file's header.
+        if os.path.exists(out_csv):
+            with open(out_csv) as fh:
+                header = fh.readline().rstrip("\n").split(",")
+            if header != COLUMNS:
+                raise RuntimeError(f"{out_csv} has an old column layout; run repair_results.py first")
         pd.DataFrame(rows).reindex(columns=COLUMNS).to_csv(out_csv, mode="a", index=False,
                                                           header=not os.path.exists(out_csv))
-
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
@@ -240,26 +282,32 @@ if __name__ == "__main__":
         d = pd.read_csv(f, usecols=["task", "model"])
         done |= set(zip(d["task"], d["model"]))
     todo = [t for t in tasks if any((task_id(t), m) not in done
-                                    for m in [f"VQC-{f.upper()}" for f in fmaps] + list(CANDIDATES) + ["RF-all33"])]
+                                    for m in [f"VQC-{f.upper()}" for f in fmaps] + CLASSICAL_MODELS)]
 
     if args.plan:
-        hours = sum(estimate_seconds(t, fmaps) for t in todo) / 3600
-        print(f"stage '{stage}': {len(tasks)} tasks ({len(tasks) - len(todo)} already done), "
-              f"{len(todo) * len(fmaps)} VQC trainings to go")
+        # Only missing VQC trainings cost hours; missing classical models (e.g. the MLP
+        # back-fill for finished stages) take seconds.
+        vqc_todo = [t for t in todo if any((task_id(t), f"VQC-{f.upper()}") not in done for f in fmaps)]
+        hours = sum(estimate_seconds(t, fmaps) for t in vqc_todo) / 3600
+        print(f"stage '{stage}': {len(tasks)} tasks ({len(tasks) - len(todo)} complete); "
+              f"{len(vqc_todo)} need VQC training, {len(todo) - len(vqc_todo)} only classical back-fill")
         owner = assign_shards(tasks, fmaps, args.nshards)
-        per_shard = [sum(estimate_seconds(t, fmaps) for t in todo if owner[task_id(t)] == k) / 3600
+        per_shard = [sum(estimate_seconds(t, fmaps) for t in vqc_todo if owner[task_id(t)] == k) / 3600
                      for k in range(args.nshards)]
         print(f"estimated VQC time: {hours:.1f} h on one process "
               f"-> {max(per_shard):.1f} h with {args.nshards} parallel shards "
               f"(busiest shard; others {min(per_shard):.1f}-{max(per_shard):.1f} h)")
-        by_sc = pd.DataFrame([{**t, "hours": estimate_seconds(t, fmaps) / 3600} for t in todo])
+        by_sc = pd.DataFrame([{**t, "hours": estimate_seconds(t, fmaps) / 3600} for t in vqc_todo])
         if len(by_sc):
             print(by_sc.groupby("scenario")["hours"].sum().round(1).to_string())
         raise SystemExit
 
     with open(f"{out_dir}/model_config.json", "w") as fh:
         json.dump({"model": MODEL, "stages": STAGES, "n_val_per_class": N_VAL_PER_CLASS}, fh, indent=2, default=str)
-    #Balanced split of the FULL task list”.
+    # Balanced split of the FULL task list (not just the unfinished ones), so a restarted
+    # shard keeps exactly the same tasks and never overlaps with shards still running.
+    # (Do not edit this file while shards of a stage are running: a restarted shard must
+    # compute the same split as the ones still running.)
     todo_ids = {task_id(t) for t in todo}
     owner = assign_shards(tasks, fmaps, args.nshards)
     mine = [t for t in tasks if owner[task_id(t)] == args.shard and task_id(t) in todo_ids]

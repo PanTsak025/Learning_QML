@@ -1,0 +1,45 @@
+nohup: ignoring input
+shard 2/8: 39 tasks
+--- [1/39] DDoS_n25_q2_mi_kmeans_s0
+{'task': 'DDoS_n25_q2_mi_kmeans_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 9.4}
+{'task': 'DDoS_n25_q2_mi_kmeans_s0', 'model': 'LogReg', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n25_q2_mi_kmeans_s0', 'model': 'SVM-RBF', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n25_q2_mi_kmeans_s0', 'model': 'RF', 'test_macro_f1': 0.999, 'val_macro_f1': 0.999, 'seconds': 0.4}
+{'task': 'DDoS_n25_q2_mi_kmeans_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n25_q2_mi_kmeans_s0', 'model': 'RF-all33', 'test_macro_f1': 0.999, 'val_macro_f1': 1.0, 'seconds': 0.4}
+--- [2/39] DDoS_n100_q2_mi_kmeans_s2
+{'task': 'DDoS_n100_q2_mi_kmeans_s2', 'model': 'VQC-RY', 'test_macro_f1': 0.9291, 'val_macro_f1': 0.9276, 'seconds': 39.2}
+{'task': 'DDoS_n100_q2_mi_kmeans_s2', 'model': 'LogReg', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n100_q2_mi_kmeans_s2', 'model': 'SVM-RBF', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DDoS_n100_q2_mi_kmeans_s2', 'model': 'RF', 'test_macro_f1': 0.9985, 'val_macro_f1': 0.999, 'seconds': 0.4}
+{'task': 'DDoS_n100_q2_mi_kmeans_s2', 'model': 'MLP-matched', 'test_macro_f1': 0.9985, 'val_macro_f1': 0.999, 'seconds': 0.0}
+{'task': 'DDoS_n100_q2_mi_kmeans_s2', 'model': 'RF-all33', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.5}
+--- [3/39] DoS_n25_q2_mi_kmeans_s0
+{'task': 'DoS_n25_q2_mi_kmeans_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.9825, 'val_macro_f1': 0.98, 'seconds': 12.6}
+{'task': 'DoS_n25_q2_mi_kmeans_s0', 'model': 'LogReg', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n25_q2_mi_kmeans_s0', 'model': 'SVM-RBF', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n25_q2_mi_kmeans_s0', 'model': 'RF', 'test_macro_f1': 0.982, 'val_macro_f1': 0.977, 'seconds': 0.4}
+{'task': 'DoS_n25_q2_mi_kmeans_s0', 'model': 'MLP-matched', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n25_q2_mi_kmeans_s0', 'model': 'RF-all33', 'test_macro_f1': 0.9985, 'val_macro_f1': 1.0, 'seconds': 0.4}
+--- [4/39] DoS_n50_q2_mi_kmeans_s0
+{'task': 'DoS_n50_q2_mi_kmeans_s0', 'model': 'VQC-RY', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 23.8}
+{'task': 'DoS_n50_q2_mi_kmeans_s0', 'model': 'LogReg', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n50_q2_mi_kmeans_s0', 'model': 'SVM-RBF', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n50_q2_mi_kmeans_s0', 'model': 'RF', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.4}
+{'task': 'DoS_n50_q2_mi_kmeans_s0', 'model': 'MLP-matched', 'test_macro_f1': 0.9985, 'val_macro_f1': 0.998, 'seconds': 0.0}
+{'task': 'DoS_n50_q2_mi_kmeans_s0', 'model': 'RF-all33', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.4}
+--- [5/39] DoS_n100_q2_mi_random_s1
+{'task': 'DoS_n100_q2_mi_random_s1', 'model': 'VQC-RY', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 42.9}
+{'task': 'DoS_n100_q2_mi_random_s1', 'model': 'LogReg', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n100_q2_mi_random_s1', 'model': 'SVM-RBF', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n100_q2_mi_random_s1', 'model': 'RF', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.5}
+{'task': 'DoS_n100_q2_mi_random_s1', 'model': 'MLP-matched', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n100_q2_mi_random_s1', 'model': 'RF-all33', 'test_macro_f1': 0.9995, 'val_macro_f1': 1.0, 'seconds': 0.5}
+--- [6/39] DoS_n200_q2_mi_kmeans_s0
+{'task': 'DoS_n200_q2_mi_kmeans_s0', 'model': 'VQC-RY', 'test_macro_f1': 0.9835, 'val_macro_f1': 0.988, 'seconds': 82.0}
+{'task': 'DoS_n200_q2_mi_kmeans_s0', 'model': 'LogReg', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n200_q2_mi_kmeans_s0', 'model': 'SVM-RBF', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.0}
+{'task': 'DoS_n200_q2_mi_kmeans_s0', 'model': 'RF', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.6}
+{'task': 'DoS_n200_q2_mi_kmeans_s0', 'model': 'MLP-matched', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.1}
+{'task': 'DoS_n200_q2_mi_kmeans_s0', 'model': 'RF-all33', 'test_macro_f1': 1.0, 'val_macro_f1': 1.0, 'seconds': 0.5}
+--- [7/39] DoS_n400_q2_mi_kmeans_s0

@@ -25,12 +25,44 @@
         400,
         800
       ],
-      "n_qubits": [
-        4
-      ],
-      "reducer": [
-        "pca"
-      ],
+      "settings": {
+        "DDoS": [
+          2,
+          "mi"
+        ],
+        "DoS": [
+          2,
+          "mi"
+        ],
+        "Mirai": [
+          2,
+          "mi"
+        ],
+        "Recon": [
+          2,
+          "mi"
+        ],
+        "Spoofing": [
+          4,
+          "pca"
+        ],
+        "BruteForce": [
+          4,
+          "pca"
+        ],
+        "Web": [
+          6,
+          "pca"
+        ],
+        "benign_vs_attack": [
+          2,
+          "pca"
+        ],
+        "multiclass": [
+          4,
+          "pca"
+        ]
+      },
       "sampling": [
         "random",
         "kmeans"
