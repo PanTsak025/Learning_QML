@@ -133,3 +133,8 @@ shard 2/8: 23 tasks
 {'task': 'benign_vs_attack_n200_q8_mi_random_s2', 'model': 'RF', 'test_macro_f1': 0.7933, 'val_macro_f1': 0.8179, 'seconds': 1.2}
 {'task': 'benign_vs_attack_n200_q8_mi_random_s2', 'model': 'RF-all33', 'test_macro_f1': 0.8219, 'val_macro_f1': 0.8396, 'seconds': 1.3}
 --- [23/23] multiclass_n200_q8_mi_random_s2
+{'task': 'multiclass_n200_q8_mi_random_s2', 'model': 'VQC-RY', 'test_macro_f1': 0.2327, 'val_macro_f1': 0.2339, 'seconds': 33859.8}
+{'task': 'multiclass_n200_q8_mi_random_s2', 'model': 'LogReg', 'test_macro_f1': 0.5072, 'val_macro_f1': 0.5293, 'seconds': 0.3}
+{'task': 'multiclass_n200_q8_mi_random_s2', 'model': 'SVM-RBF', 'test_macro_f1': 0.5876, 'val_macro_f1': 0.6003, 'seconds': 0.7}
+{'task': 'multiclass_n200_q8_mi_random_s2', 'model': 'RF', 'test_macro_f1': 0.6267, 'val_macro_f1': 0.6289, 'seconds': 1.1}
+{'task': 'multiclass_n200_q8_mi_random_s2', 'model': 'RF-all33', 'test_macro_f1': 0.6955, 'val_macro_f1': 0.7006, 'seconds': 1.2}
