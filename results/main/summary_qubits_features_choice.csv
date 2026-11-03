@@ -2,9 +2,9 @@
 0,DDoS,MI-2q (0.994),MI-2q,0.994,"MI-2q, MI-6q"
 1,DoS,MI-6q (1.000),MI-6q,1.0,MI-6q
 2,Mirai,MI-4q (0.999),MI-4q,0.999,MI-4q
-3,Recon,,incomplete (22/24 trainings),,
-4,Spoofing,,incomplete (14/24 trainings),,
-5,BruteForce,,incomplete (4/24 trainings),,
-6,Web,,incomplete (3/24 trainings),,
-7,benign_vs_attack,,incomplete (3/24 trainings),,
-8,multiclass,,incomplete (3/18 trainings),,
+3,Recon,PCA-4q (0.782),PCA-4q,0.782,"MI-4q, MI-6q, PCA-4q"
+4,Spoofing,PCA-6q (0.671),PCA-4q,0.67,"MI-4q, MI-8q, PCA-4q, PCA-6q, PCA-8q"
+5,BruteForce,PCA-6q (0.735),PCA-6q,0.735,PCA-6q
+6,Web,MI-6q (0.731),MI-6q,0.731,MI-6q
+7,benign_vs_attack,MI-6q (0.777),PCA-4q,0.77,"MI-6q, PCA-4q, PCA-6q"
+8,multiclass,,incomplete (13/18 trainings),,

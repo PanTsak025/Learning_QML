@@ -4,7 +4,7 @@ DoS,1.0
 Mirai,0.998
 Recon,0.778
 Spoofing,0.872
-BruteForce,0.79
+BruteForce,0.789
 Web,0.774
 benign_vs_attack,0.827
 multiclass,0.69
