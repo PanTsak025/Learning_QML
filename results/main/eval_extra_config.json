@@ -1,0 +1,11 @@
+{
+  "seed": 2026,
+  "extended_per_class": 10000,
+  "realistic_total": 20000,
+  "shots": 1024,
+  "noise": {
+    "p_1q": 0.001,
+    "p_cx": 0.01,
+    "p_readout": 0.02
+  }
+}

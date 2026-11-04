@@ -1,0 +1,84 @@
+nohup: ignoring input
+41 tasks to evaluate -> results/main/eval_extra_shard0of8.csv
+--- [1/41] DDoS_n25_q2_mi_random_s0
+{'task': 'DDoS_n25_q2_mi_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [2/41] DDoS_n50_q2_mi_random_s2
+{'task': 'DDoS_n50_q2_mi_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [3/41] DDoS_n100_q2_mi_kmeans_s1
+{'task': 'DDoS_n100_q2_mi_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [4/41] DDoS_n400_q2_mi_random_s0
+{'task': 'DDoS_n400_q2_mi_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [5/41] DDoS_n800_q2_mi_random_s2
+{'task': 'DDoS_n800_q2_mi_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [6/41] DoS_n25_q2_mi_kmeans_s1
+{'task': 'DoS_n25_q2_mi_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [7/41] DoS_n100_q2_mi_random_s0
+{'task': 'DoS_n100_q2_mi_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [8/41] DoS_n200_q2_mi_random_s2
+{'task': 'DoS_n200_q2_mi_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [9/41] DoS_n400_q2_mi_kmeans_s1
+{'task': 'DoS_n400_q2_mi_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [10/41] Mirai_n25_q2_mi_random_s0
+{'task': 'Mirai_n25_q2_mi_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [11/41] Mirai_n50_q2_mi_random_s2
+{'task': 'Mirai_n50_q2_mi_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [12/41] Mirai_n100_q2_mi_kmeans_s1
+{'task': 'Mirai_n100_q2_mi_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [13/41] Mirai_n400_q2_mi_random_s0
+{'task': 'Mirai_n400_q2_mi_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [14/41] Mirai_n800_q2_mi_random_s2
+{'task': 'Mirai_n800_q2_mi_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [15/41] Recon_n25_q2_mi_kmeans_s1
+{'task': 'Recon_n25_q2_mi_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [16/41] Recon_n100_q2_mi_random_s0
+{'task': 'Recon_n100_q2_mi_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [17/41] Recon_n200_q2_mi_random_s2
+{'task': 'Recon_n200_q2_mi_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [18/41] Recon_n400_q2_mi_kmeans_s1
+{'task': 'Recon_n400_q2_mi_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [19/41] Spoofing_n25_q4_pca_random_s0
+{'task': 'Spoofing_n25_q4_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [20/41] Spoofing_n50_q4_pca_random_s2
+{'task': 'Spoofing_n50_q4_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [21/41] Spoofing_n100_q4_pca_kmeans_s1
+{'task': 'Spoofing_n100_q4_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [22/41] Spoofing_n400_q4_pca_random_s0
+{'task': 'Spoofing_n400_q4_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [23/41] Spoofing_n800_q4_pca_random_s2
+{'task': 'Spoofing_n800_q4_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [24/41] BruteForce_n25_q4_pca_kmeans_s1
+{'task': 'BruteForce_n25_q4_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [25/41] BruteForce_n100_q4_pca_random_s0
+{'task': 'BruteForce_n100_q4_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [26/41] BruteForce_n200_q4_pca_random_s2
+{'task': 'BruteForce_n200_q4_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [27/41] BruteForce_n400_q4_pca_kmeans_s1
+{'task': 'BruteForce_n400_q4_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [28/41] Web_n25_q6_pca_random_s0
+{'task': 'Web_n25_q6_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [29/41] Web_n50_q6_pca_random_s2
+{'task': 'Web_n50_q6_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [30/41] Web_n100_q6_pca_kmeans_s1
+{'task': 'Web_n100_q6_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [31/41] Web_n400_q6_pca_random_s0
+{'task': 'Web_n400_q6_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [32/41] Web_n800_q6_pca_random_s2
+{'task': 'Web_n800_q6_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [33/41] benign_vs_attack_n25_q2_pca_kmeans_s1
+{'task': 'benign_vs_attack_n25_q2_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [34/41] benign_vs_attack_n100_q2_pca_random_s0
+{'task': 'benign_vs_attack_n100_q2_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [35/41] benign_vs_attack_n200_q2_pca_random_s2
+{'task': 'benign_vs_attack_n200_q2_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [36/41] benign_vs_attack_n400_q2_pca_kmeans_s1
+{'task': 'benign_vs_attack_n400_q2_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [37/41] multiclass_n25_q4_pca_random_s0
+{'task': 'multiclass_n25_q4_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [38/41] multiclass_n50_q4_pca_random_s2
+{'task': 'multiclass_n50_q4_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
+--- [39/41] multiclass_n100_q4_pca_kmeans_s1
+{'task': 'multiclass_n100_q4_pca_kmeans_s1', 'rows': 20, 'max_repro_diff': 0.0}
+--- [40/41] multiclass_n400_q4_pca_random_s0
+{'task': 'multiclass_n400_q4_pca_random_s0', 'rows': 20, 'max_repro_diff': 0.0}
+--- [41/41] multiclass_n800_q4_pca_random_s2
+{'task': 'multiclass_n800_q4_pca_random_s2', 'rows': 20, 'max_repro_diff': 0.0}
