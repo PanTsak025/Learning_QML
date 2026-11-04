@@ -1,0 +1,19 @@
+scenario,sampling,n_B_VQC-RY,best_F1_VQC-RY,n_B_LogReg,best_F1_LogReg,n_B_SVM-RBF,best_F1_SVM-RBF,n_B_RF,best_F1_RF,n_B_MLP-matched,best_F1_MLP-matched
+BruteForce,kmeans,no stable plateau (best at 400),0.719,800,0.71,no stable plateau (best at 200),0.721,400,0.713,800,0.707
+BruteForce,random,400,0.726,800,0.721,400,0.734,400,0.735,400,0.729
+DDoS,kmeans,800,0.999,800,0.999,400,1.0,no stable plateau (best at 200),1.0,no stable plateau (best at 200),1.0
+DDoS,random,no stable plateau (best at 100),0.999,no stable plateau (best at 25),0.999,no stable plateau (best at 50),0.999,200,0.999,no stable plateau (best at 100),1.0
+DoS,kmeans,no stable plateau (best at 50),1.0,25,1.0,25,1.0,100,1.0,400,1.0
+DoS,random,50,0.989,50,1.0,no stable plateau (best at 25),1.0,400,1.0,50,1.0
+Mirai,kmeans,800,0.999,400,1.0,800,1.0,400,1.0,50,1.0
+Mirai,random,no stable plateau (best at 100),0.998,25,0.999,800,0.999,800,0.999,800,0.999
+Recon,kmeans,800,0.729,400,0.736,800,0.731,no stable plateau (best at 400),0.735,800,0.73
+Recon,random,800,0.748,800,0.745,400,0.747,800,0.754,800,0.747
+Spoofing,kmeans,800,0.663,no stable plateau (best at 400),0.634,no stable plateau (best at 400),0.724,400,0.726,no stable plateau (best at 400),0.675
+Spoofing,random,no stable plateau (best at 400),0.672,800,0.626,800,0.72,800,0.731,800,0.69
+Web,kmeans,no stable plateau (best at 50),0.692,no stable plateau (best at 100),0.693,800,0.742,no stable plateau (best at 400),0.736,no stable plateau (best at 400),0.711
+Web,random,200,0.71,200,0.716,400,0.752,800,0.75,400,0.732
+benign_vs_attack,kmeans,no stable plateau (best at 100),0.75,no stable plateau (best at 100),0.747,no stable plateau (best at 50),0.747,no stable plateau (best at 50),0.741,no stable plateau (best at 50),0.738
+benign_vs_attack,random,no stable plateau (best at 200),0.746,no stable plateau (best at 50),0.748,25,0.75,no stable plateau (best at 200),0.76,800,0.743
+multiclass,kmeans,no stable plateau (best at 400),0.286,800,0.416,400,0.576,800,0.592,800,0.306
+multiclass,random,no stable plateau (best at 200),0.347,no stable plateau (best at 200),0.489,400,0.581,800,0.603,no stable plateau (best at 50),0.345
