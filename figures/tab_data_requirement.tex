@@ -1,0 +1,25 @@
+\begin{tabular}{llccccc}
+\toprule
+ & & $n_A$ & \multicolumn{4}{c}{$n_B$ (plateau)} \\ \cmidrule(lr){4-7}
+Scenario & Sampling & VQC = classical & VQC & MLP & SVM & RF \\
+\midrule
+DDoS & random & $>$800 & -- & -- & -- & 200 \\
+ & k-means & $>$800 & 800 & -- & 400 & -- \\
+DoS & random & $>$800 & 50 & 50 & -- & 400 \\
+ & k-means & $>$800 & -- & 400 & 25 & 100 \\
+Mirai & random & $>$800 & -- & 800 & 800 & 800 \\
+ & k-means & $>$800 & 800 & 50 & 800 & 400 \\
+Recon & random & $>$800 & 800 & 800 & 400 & 800 \\
+ & k-means & $>$800 & 800 & 800 & 800 & -- \\
+Spoofing & random & $>$800 & -- & 800 & 800 & 800 \\
+ & k-means & $>$800 & 800 & -- & -- & 400 \\
+Brute force & random & $>$800 & 400 & 400 & 400 & 400 \\
+ & k-means & 200 & -- & 800 & -- & 400 \\
+Web & random & $>$800 & 200 & 400 & 400 & 800 \\
+ & k-means & $>$800 & -- & -- & 800 & -- \\
+All attacks & random & $>$800 & -- & 800 & 25 & -- \\
+ & k-means & 800 & -- & -- & -- & -- \\
+8-class & random & $>$800 & -- & -- & 400 & 800 \\
+ & k-means & $>$800 & -- & 800 & 400 & 800 \\
+\bottomrule
+\end{tabular}
