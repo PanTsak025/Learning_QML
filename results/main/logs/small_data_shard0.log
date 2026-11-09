@@ -22,3 +22,8 @@ shard 0/8: 14 tasks
 {'task': 'Recon_n25_q2_mi_random_s12', 'model': 'MLP-matched', 'test_macro_f1': 0.5937, 'val_macro_f1': 0.6066, 'seconds': 0.1}
 {'task': 'Recon_n25_q2_mi_random_s12', 'model': 'RF-all33', 'test_macro_f1': 0.688, 'val_macro_f1': 0.7127, 'seconds': 0.4}
 --- [4/14] Recon_n50_q2_mi_random_s8
+{'task': 'Recon_n50_q2_mi_random_s8', 'model': 'VQC-RY', 'test_macro_f1': 0.7452, 'val_macro_f1': 0.7589, 'seconds': 21.4}
+{'task': 'Recon_n50_q2_mi_random_s8', 'model': 'LogReg', 'test_macro_f1': 0.7512, 'val_macro_f1': 0.7633, 'seconds': 0.0}
+{'task': 'Recon_n50_q2_mi_random_s8', 'model': 'SVM-RBF', 'test_macro_f1': 0.748, 'val_macro_f1': 0.7646, 'seconds': 0.0}
+{'task': 'Recon_n50_q2_mi_random_s8', 'model': 'RF', 'test_macro_f1': 0.7285, 'val_macro_f1': 0.7406, 'seconds': 0.6}
+{'task': 'Recon_n50_q2_mi_random_s8', 'model': 'MLP-matched', 'test_macro_f1': 0.7447, 'val_macro_f1': 0.7449, 'seconds': 0.1}

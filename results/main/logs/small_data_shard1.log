@@ -22,3 +22,4 @@ shard 1/8: 14 tasks
 {'task': 'Recon_n25_q2_mi_random_s3', 'model': 'MLP-matched', 'test_macro_f1': 0.7063, 'val_macro_f1': 0.6914, 'seconds': 0.1}
 {'task': 'Recon_n25_q2_mi_random_s3', 'model': 'RF-all33', 'test_macro_f1': 0.6712, 'val_macro_f1': 0.6569, 'seconds': 0.5}
 --- [4/14] Recon_n50_q2_mi_random_s9
+{'task': 'Recon_n50_q2_mi_random_s9', 'model': 'VQC-RY', 'test_macro_f1': 0.749, 'val_macro_f1': 0.72, 'seconds': 21.9}
