@@ -68,6 +68,17 @@ STAGES = {
         "n_qubits": [4], "reducer": ["pca"], "sampling": ["random"],
         "seed": [0, 1, 2], "feature_maps": ["ry", "zz"],
     },
+        # Confirmatory follow-up, fixed before running (hypothesis and test: analyze_small_data.py).
+    # Does the VQC beat the same-size MLP with very little data? Window-matched scenarios
+    # only (Benign and these attacks share the 10-packet extraction window), each with its
+    # learning-curve setting, and NEW seeds 3-12 so the training samples differ from the
+    # ones (seeds 0-2) whose results suggested the idea.
+    "small_data": {
+        "scenario": ["Recon", "Spoofing", "BruteForce", "Web"], "n_train": [10, 25, 50],
+        "settings": {"Recon": (2, "mi"), "Spoofing": (4, "pca"), "BruteForce": (4, "pca"),
+                     "Web": (6, "pca")},
+        "sampling": ["random"], "seed": list(range(3, 13)), "feature_maps": ["ry"],
+    },
     # Tiny grid to check that everything runs end to end.
     "smoke": {
         "scenario": ["Recon", "multiclass"], "n_train": [10],

@@ -1,0 +1,24 @@
+nohup: ignoring input
+shard 0/8: 14 tasks
+--- [1/14] Recon_n10_q2_mi_random_s8
+{'task': 'Recon_n10_q2_mi_random_s8', 'model': 'VQC-RY', 'test_macro_f1': 0.7363, 'val_macro_f1': 0.7267, 'seconds': 4.5}
+{'task': 'Recon_n10_q2_mi_random_s8', 'model': 'LogReg', 'test_macro_f1': 0.7365, 'val_macro_f1': 0.734, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s8', 'model': 'SVM-RBF', 'test_macro_f1': 0.7375, 'val_macro_f1': 0.733, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s8', 'model': 'RF', 'test_macro_f1': 0.728, 'val_macro_f1': 0.7169, 'seconds': 0.4}
+{'task': 'Recon_n10_q2_mi_random_s8', 'model': 'MLP-matched', 'test_macro_f1': 0.7415, 'val_macro_f1': 0.7343, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s8', 'model': 'RF-all33', 'test_macro_f1': 0.7444, 'val_macro_f1': 0.744, 'seconds': 0.4}
+--- [2/14] Recon_n10_q2_mi_random_s10
+{'task': 'Recon_n10_q2_mi_random_s10', 'model': 'VQC-RY', 'test_macro_f1': 0.4348, 'val_macro_f1': 0.3979, 'seconds': 4.6}
+{'task': 'Recon_n10_q2_mi_random_s10', 'model': 'LogReg', 'test_macro_f1': 0.5379, 'val_macro_f1': 0.5542, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s10', 'model': 'SVM-RBF', 'test_macro_f1': 0.5083, 'val_macro_f1': 0.4878, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s10', 'model': 'RF', 'test_macro_f1': 0.5908, 'val_macro_f1': 0.5785, 'seconds': 0.4}
+{'task': 'Recon_n10_q2_mi_random_s10', 'model': 'MLP-matched', 'test_macro_f1': 0.5663, 'val_macro_f1': 0.5661, 'seconds': 0.1}
+{'task': 'Recon_n10_q2_mi_random_s10', 'model': 'RF-all33', 'test_macro_f1': 0.6957, 'val_macro_f1': 0.6836, 'seconds': 0.4}
+--- [3/14] Recon_n25_q2_mi_random_s12
+{'task': 'Recon_n25_q2_mi_random_s12', 'model': 'VQC-RY', 'test_macro_f1': 0.6969, 'val_macro_f1': 0.6717, 'seconds': 11.5}
+{'task': 'Recon_n25_q2_mi_random_s12', 'model': 'LogReg', 'test_macro_f1': 0.7031, 'val_macro_f1': 0.6797, 'seconds': 0.0}
+{'task': 'Recon_n25_q2_mi_random_s12', 'model': 'SVM-RBF', 'test_macro_f1': 0.6759, 'val_macro_f1': 0.6706, 'seconds': 0.0}
+{'task': 'Recon_n25_q2_mi_random_s12', 'model': 'RF', 'test_macro_f1': 0.6526, 'val_macro_f1': 0.6489, 'seconds': 0.4}
+{'task': 'Recon_n25_q2_mi_random_s12', 'model': 'MLP-matched', 'test_macro_f1': 0.5937, 'val_macro_f1': 0.6066, 'seconds': 0.1}
+{'task': 'Recon_n25_q2_mi_random_s12', 'model': 'RF-all33', 'test_macro_f1': 0.688, 'val_macro_f1': 0.7127, 'seconds': 0.4}
+--- [4/14] Recon_n50_q2_mi_random_s8

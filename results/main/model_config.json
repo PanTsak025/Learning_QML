@@ -147,6 +147,55 @@
         "zz"
       ]
     },
+    "small_data": {
+      "scenario": [
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web"
+      ],
+      "n_train": [
+        10,
+        25,
+        50
+      ],
+      "settings": {
+        "Recon": [
+          2,
+          "mi"
+        ],
+        "Spoofing": [
+          4,
+          "pca"
+        ],
+        "BruteForce": [
+          4,
+          "pca"
+        ],
+        "Web": [
+          6,
+          "pca"
+        ]
+      },
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "feature_maps": [
+        "ry"
+      ]
+    },
     "smoke": {
       "scenario": [
         "Recon",

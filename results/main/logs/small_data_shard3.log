@@ -1,0 +1,24 @@
+nohup: ignoring input
+shard 3/8: 15 tasks
+--- [1/15] Recon_n10_q2_mi_random_s5
+{'task': 'Recon_n10_q2_mi_random_s5', 'model': 'VQC-RY', 'test_macro_f1': 0.5951, 'val_macro_f1': 0.5868, 'seconds': 4.6}
+{'task': 'Recon_n10_q2_mi_random_s5', 'model': 'LogReg', 'test_macro_f1': 0.5894, 'val_macro_f1': 0.577, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s5', 'model': 'SVM-RBF', 'test_macro_f1': 0.6258, 'val_macro_f1': 0.6152, 'seconds': 0.0}
+{'task': 'Recon_n10_q2_mi_random_s5', 'model': 'RF', 'test_macro_f1': 0.531, 'val_macro_f1': 0.5447, 'seconds': 0.4}
+{'task': 'Recon_n10_q2_mi_random_s5', 'model': 'MLP-matched', 'test_macro_f1': 0.5931, 'val_macro_f1': 0.6069, 'seconds': 0.1}
+{'task': 'Recon_n10_q2_mi_random_s5', 'model': 'RF-all33', 'test_macro_f1': 0.5959, 'val_macro_f1': 0.6206, 'seconds': 0.4}
+--- [2/15] Recon_n25_q2_mi_random_s7
+{'task': 'Recon_n25_q2_mi_random_s7', 'model': 'VQC-RY', 'test_macro_f1': 0.6538, 'val_macro_f1': 0.6486, 'seconds': 10.0}
+{'task': 'Recon_n25_q2_mi_random_s7', 'model': 'LogReg', 'test_macro_f1': 0.6676, 'val_macro_f1': 0.6596, 'seconds': 0.0}
+{'task': 'Recon_n25_q2_mi_random_s7', 'model': 'SVM-RBF', 'test_macro_f1': 0.6516, 'val_macro_f1': 0.6525, 'seconds': 0.0}
+{'task': 'Recon_n25_q2_mi_random_s7', 'model': 'RF', 'test_macro_f1': 0.603, 'val_macro_f1': 0.6014, 'seconds': 0.4}
+{'task': 'Recon_n25_q2_mi_random_s7', 'model': 'MLP-matched', 'test_macro_f1': 0.6242, 'val_macro_f1': 0.617, 'seconds': 0.1}
+{'task': 'Recon_n25_q2_mi_random_s7', 'model': 'RF-all33', 'test_macro_f1': 0.7156, 'val_macro_f1': 0.6992, 'seconds': 0.4}
+--- [3/15] Recon_n50_q2_mi_random_s3
+{'task': 'Recon_n50_q2_mi_random_s3', 'model': 'VQC-RY', 'test_macro_f1': 0.7536, 'val_macro_f1': 0.7394, 'seconds': 20.2}
+{'task': 'Recon_n50_q2_mi_random_s3', 'model': 'LogReg', 'test_macro_f1': 0.7567, 'val_macro_f1': 0.7535, 'seconds': 0.0}
+{'task': 'Recon_n50_q2_mi_random_s3', 'model': 'SVM-RBF', 'test_macro_f1': 0.7476, 'val_macro_f1': 0.735, 'seconds': 0.0}
+{'task': 'Recon_n50_q2_mi_random_s3', 'model': 'RF', 'test_macro_f1': 0.7374, 'val_macro_f1': 0.7234, 'seconds': 0.5}
+{'task': 'Recon_n50_q2_mi_random_s3', 'model': 'MLP-matched', 'test_macro_f1': 0.7476, 'val_macro_f1': 0.735, 'seconds': 0.1}
+{'task': 'Recon_n50_q2_mi_random_s3', 'model': 'RF-all33', 'test_macro_f1': 0.736, 'val_macro_f1': 0.7257, 'seconds': 0.5}
+--- [4/15] Spoofing_n10_q4_pca_random_s7
