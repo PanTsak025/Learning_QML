@@ -27,3 +27,74 @@ shard 0/8: 14 tasks
 {'task': 'Recon_n50_q2_mi_random_s8', 'model': 'SVM-RBF', 'test_macro_f1': 0.748, 'val_macro_f1': 0.7646, 'seconds': 0.0}
 {'task': 'Recon_n50_q2_mi_random_s8', 'model': 'RF', 'test_macro_f1': 0.7285, 'val_macro_f1': 0.7406, 'seconds': 0.6}
 {'task': 'Recon_n50_q2_mi_random_s8', 'model': 'MLP-matched', 'test_macro_f1': 0.7447, 'val_macro_f1': 0.7449, 'seconds': 0.1}
+{'task': 'Recon_n50_q2_mi_random_s8', 'model': 'RF-all33', 'test_macro_f1': 0.7614, 'val_macro_f1': 0.7764, 'seconds': 0.6}
+--- [5/14] Spoofing_n10_q4_pca_random_s4
+{'task': 'Spoofing_n10_q4_pca_random_s4', 'model': 'VQC-RY', 'test_macro_f1': 0.6532, 'val_macro_f1': 0.613, 'seconds': 27.0}
+{'task': 'Spoofing_n10_q4_pca_random_s4', 'model': 'LogReg', 'test_macro_f1': 0.6174, 'val_macro_f1': 0.578, 'seconds': 0.0}
+{'task': 'Spoofing_n10_q4_pca_random_s4', 'model': 'SVM-RBF', 'test_macro_f1': 0.6549, 'val_macro_f1': 0.6232, 'seconds': 0.0}
+{'task': 'Spoofing_n10_q4_pca_random_s4', 'model': 'RF', 'test_macro_f1': 0.6443, 'val_macro_f1': 0.6124, 'seconds': 0.5}
+{'task': 'Spoofing_n10_q4_pca_random_s4', 'model': 'MLP-matched', 'test_macro_f1': 0.6588, 'val_macro_f1': 0.6223, 'seconds': 0.1}
+{'task': 'Spoofing_n10_q4_pca_random_s4', 'model': 'RF-all33', 'test_macro_f1': 0.685, 'val_macro_f1': 0.6771, 'seconds': 0.5}
+--- [6/14] Spoofing_n25_q4_pca_random_s8
+{'task': 'Spoofing_n25_q4_pca_random_s8', 'model': 'VQC-RY', 'test_macro_f1': 0.5981, 'val_macro_f1': 0.55, 'seconds': 53.9}
+{'task': 'Spoofing_n25_q4_pca_random_s8', 'model': 'LogReg', 'test_macro_f1': 0.6054, 'val_macro_f1': 0.5906, 'seconds': 0.0}
+{'task': 'Spoofing_n25_q4_pca_random_s8', 'model': 'SVM-RBF', 'test_macro_f1': 0.6549, 'val_macro_f1': 0.626, 'seconds': 0.0}
+{'task': 'Spoofing_n25_q4_pca_random_s8', 'model': 'RF', 'test_macro_f1': 0.6504, 'val_macro_f1': 0.6236, 'seconds': 0.5}
+{'task': 'Spoofing_n25_q4_pca_random_s8', 'model': 'MLP-matched', 'test_macro_f1': 0.6073, 'val_macro_f1': 0.6019, 'seconds': 0.1}
+{'task': 'Spoofing_n25_q4_pca_random_s8', 'model': 'RF-all33', 'test_macro_f1': 0.7748, 'val_macro_f1': 0.7696, 'seconds': 0.5}
+--- [7/14] Spoofing_n25_q4_pca_random_s10
+{'task': 'Spoofing_n25_q4_pca_random_s10', 'model': 'VQC-RY', 'test_macro_f1': 0.5649, 'val_macro_f1': 0.537, 'seconds': 54.6}
+{'task': 'Spoofing_n25_q4_pca_random_s10', 'model': 'LogReg', 'test_macro_f1': 0.5663, 'val_macro_f1': 0.5408, 'seconds': 0.0}
+{'task': 'Spoofing_n25_q4_pca_random_s10', 'model': 'SVM-RBF', 'test_macro_f1': 0.6008, 'val_macro_f1': 0.5744, 'seconds': 0.0}
+{'task': 'Spoofing_n25_q4_pca_random_s10', 'model': 'RF', 'test_macro_f1': 0.574, 'val_macro_f1': 0.5289, 'seconds': 0.5}
+{'task': 'Spoofing_n25_q4_pca_random_s10', 'model': 'MLP-matched', 'test_macro_f1': 0.5585, 'val_macro_f1': 0.5463, 'seconds': 0.2}
+{'task': 'Spoofing_n25_q4_pca_random_s10', 'model': 'RF-all33', 'test_macro_f1': 0.7216, 'val_macro_f1': 0.7056, 'seconds': 0.5}
+--- [8/14] Spoofing_n50_q4_pca_random_s12
+{'task': 'Spoofing_n50_q4_pca_random_s12', 'model': 'VQC-RY', 'test_macro_f1': 0.6314, 'val_macro_f1': 0.6068, 'seconds': 107.2}
+{'task': 'Spoofing_n50_q4_pca_random_s12', 'model': 'LogReg', 'test_macro_f1': 0.604, 'val_macro_f1': 0.5863, 'seconds': 0.0}
+{'task': 'Spoofing_n50_q4_pca_random_s12', 'model': 'SVM-RBF', 'test_macro_f1': 0.6784, 'val_macro_f1': 0.6392, 'seconds': 0.0}
+{'task': 'Spoofing_n50_q4_pca_random_s12', 'model': 'RF', 'test_macro_f1': 0.6653, 'val_macro_f1': 0.653, 'seconds': 0.6}
+{'task': 'Spoofing_n50_q4_pca_random_s12', 'model': 'MLP-matched', 'test_macro_f1': 0.625, 'val_macro_f1': 0.6159, 'seconds': 0.1}
+{'task': 'Spoofing_n50_q4_pca_random_s12', 'model': 'RF-all33', 'test_macro_f1': 0.8426, 'val_macro_f1': 0.8427, 'seconds': 0.6}
+--- [9/14] BruteForce_n10_q4_pca_random_s6
+{'task': 'BruteForce_n10_q4_pca_random_s6', 'model': 'VQC-RY', 'test_macro_f1': 0.7276, 'val_macro_f1': 0.7259, 'seconds': 24.4}
+{'task': 'BruteForce_n10_q4_pca_random_s6', 'model': 'LogReg', 'test_macro_f1': 0.711, 'val_macro_f1': 0.7309, 'seconds': 0.0}
+{'task': 'BruteForce_n10_q4_pca_random_s6', 'model': 'SVM-RBF', 'test_macro_f1': 0.7238, 'val_macro_f1': 0.731, 'seconds': 0.0}
+{'task': 'BruteForce_n10_q4_pca_random_s6', 'model': 'RF', 'test_macro_f1': 0.6945, 'val_macro_f1': 0.6955, 'seconds': 0.5}
+{'task': 'BruteForce_n10_q4_pca_random_s6', 'model': 'MLP-matched', 'test_macro_f1': 0.6801, 'val_macro_f1': 0.6865, 'seconds': 0.1}
+{'task': 'BruteForce_n10_q4_pca_random_s6', 'model': 'RF-all33', 'test_macro_f1': 0.7054, 'val_macro_f1': 0.7099, 'seconds': 0.5}
+--- [10/14] BruteForce_n50_q4_pca_random_s4
+{'task': 'BruteForce_n50_q4_pca_random_s4', 'model': 'VQC-RY', 'test_macro_f1': 0.7223, 'val_macro_f1': 0.724, 'seconds': 105.5}
+{'task': 'BruteForce_n50_q4_pca_random_s4', 'model': 'LogReg', 'test_macro_f1': 0.683, 'val_macro_f1': 0.7126, 'seconds': 0.0}
+{'task': 'BruteForce_n50_q4_pca_random_s4', 'model': 'SVM-RBF', 'test_macro_f1': 0.7198, 'val_macro_f1': 0.726, 'seconds': 0.0}
+{'task': 'BruteForce_n50_q4_pca_random_s4', 'model': 'RF', 'test_macro_f1': 0.6875, 'val_macro_f1': 0.6916, 'seconds': 0.5}
+{'task': 'BruteForce_n50_q4_pca_random_s4', 'model': 'MLP-matched', 'test_macro_f1': 0.6882, 'val_macro_f1': 0.6909, 'seconds': 0.2}
+{'task': 'BruteForce_n50_q4_pca_random_s4', 'model': 'RF-all33', 'test_macro_f1': 0.7271, 'val_macro_f1': 0.731, 'seconds': 0.5}
+--- [11/14] Web_n10_q6_pca_random_s8
+{'task': 'Web_n10_q6_pca_random_s8', 'model': 'VQC-RY', 'test_macro_f1': 0.5924, 'val_macro_f1': 0.5758, 'seconds': 81.9}
+{'task': 'Web_n10_q6_pca_random_s8', 'model': 'LogReg', 'test_macro_f1': 0.5895, 'val_macro_f1': 0.567, 'seconds': 0.0}
+{'task': 'Web_n10_q6_pca_random_s8', 'model': 'SVM-RBF', 'test_macro_f1': 0.6299, 'val_macro_f1': 0.6242, 'seconds': 0.0}
+{'task': 'Web_n10_q6_pca_random_s8', 'model': 'RF', 'test_macro_f1': 0.5744, 'val_macro_f1': 0.5261, 'seconds': 0.6}
+{'task': 'Web_n10_q6_pca_random_s8', 'model': 'MLP-matched', 'test_macro_f1': 0.6112, 'val_macro_f1': 0.5777, 'seconds': 0.1}
+{'task': 'Web_n10_q6_pca_random_s8', 'model': 'RF-all33', 'test_macro_f1': 0.6379, 'val_macro_f1': 0.619, 'seconds': 0.5}
+--- [12/14] Web_n10_q6_pca_random_s10
+{'task': 'Web_n10_q6_pca_random_s10', 'model': 'VQC-RY', 'test_macro_f1': 0.6501, 'val_macro_f1': 0.6632, 'seconds': 83.3}
+{'task': 'Web_n10_q6_pca_random_s10', 'model': 'LogReg', 'test_macro_f1': 0.6304, 'val_macro_f1': 0.629, 'seconds': 0.0}
+{'task': 'Web_n10_q6_pca_random_s10', 'model': 'SVM-RBF', 'test_macro_f1': 0.667, 'val_macro_f1': 0.68, 'seconds': 0.0}
+{'task': 'Web_n10_q6_pca_random_s10', 'model': 'RF', 'test_macro_f1': 0.6271, 'val_macro_f1': 0.6559, 'seconds': 0.5}
+{'task': 'Web_n10_q6_pca_random_s10', 'model': 'MLP-matched', 'test_macro_f1': 0.6524, 'val_macro_f1': 0.6973, 'seconds': 0.0}
+{'task': 'Web_n10_q6_pca_random_s10', 'model': 'RF-all33', 'test_macro_f1': 0.6521, 'val_macro_f1': 0.6638, 'seconds': 0.5}
+--- [13/14] Web_n50_q6_pca_random_s8
+{'task': 'Web_n50_q6_pca_random_s8', 'model': 'VQC-RY', 'test_macro_f1': 0.7144, 'val_macro_f1': 0.716, 'seconds': 374.4}
+{'task': 'Web_n50_q6_pca_random_s8', 'model': 'LogReg', 'test_macro_f1': 0.7254, 'val_macro_f1': 0.7128, 'seconds': 0.0}
+{'task': 'Web_n50_q6_pca_random_s8', 'model': 'SVM-RBF', 'test_macro_f1': 0.7266, 'val_macro_f1': 0.7183, 'seconds': 0.0}
+{'task': 'Web_n50_q6_pca_random_s8', 'model': 'RF', 'test_macro_f1': 0.7127, 'val_macro_f1': 0.7227, 'seconds': 0.5}
+{'task': 'Web_n50_q6_pca_random_s8', 'model': 'MLP-matched', 'test_macro_f1': 0.7094, 'val_macro_f1': 0.7237, 'seconds': 0.6}
+{'task': 'Web_n50_q6_pca_random_s8', 'model': 'RF-all33', 'test_macro_f1': 0.74, 'val_macro_f1': 0.756, 'seconds': 0.5}
+--- [14/14] Web_n50_q6_pca_random_s10
+{'task': 'Web_n50_q6_pca_random_s10', 'model': 'VQC-RY', 'test_macro_f1': 0.719, 'val_macro_f1': 0.714, 'seconds': 369.8}
+{'task': 'Web_n50_q6_pca_random_s10', 'model': 'LogReg', 'test_macro_f1': 0.7047, 'val_macro_f1': 0.708, 'seconds': 0.0}
+{'task': 'Web_n50_q6_pca_random_s10', 'model': 'SVM-RBF', 'test_macro_f1': 0.7255, 'val_macro_f1': 0.7396, 'seconds': 0.0}
+{'task': 'Web_n50_q6_pca_random_s10', 'model': 'RF', 'test_macro_f1': 0.6961, 'val_macro_f1': 0.7261, 'seconds': 0.5}
+{'task': 'Web_n50_q6_pca_random_s10', 'model': 'MLP-matched', 'test_macro_f1': 0.6862, 'val_macro_f1': 0.7093, 'seconds': 0.4}
+{'task': 'Web_n50_q6_pca_random_s10', 'model': 'RF-all33', 'test_macro_f1': 0.7424, 'val_macro_f1': 0.747, 'seconds': 0.4}
