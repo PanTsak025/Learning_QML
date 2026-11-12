@@ -1,0 +1,50 @@
+nohup: ignoring input
+shard 1/8: 24 jobs
+--- [1/24] Recon_n200_q4_pca_random_s0|A4_reupload|0
+{'task': 'Recon_n200_q4_pca_random_s0', 'arm': 'A4_reupload', 'start': 0, 'train_macro_f1': 0.735, 'loss_ratio': 0.7595443569729108, 'val_macro_f1': 0.745, 'test_macro_f1': 0.745, 'seconds': 428.7}
+--- [2/24] Recon_n200_q4_pca_random_s0|A5_kernel|0
+{'task': 'Recon_n200_q4_pca_random_s0', 'arm': 'A5_kernel', 'start': 0, 'train_macro_f1': 0.762, 'loss_ratio': nan, 'val_macro_f1': 0.7727, 'test_macro_f1': 0.7716, 'seconds': 5.5}
+--- [3/24] Recon_n200_q4_pca_random_s1|A0_baseline|0
+{'task': 'Recon_n200_q4_pca_random_s1', 'arm': 'A0_baseline', 'start': 0, 'train_macro_f1': 0.7974, 'loss_ratio': 0.677752769743292, 'val_macro_f1': 0.7879, 'test_macro_f1': 0.7715, 'seconds': 389.2}
+--- [4/24] Recon_n200_q4_pca_random_s1|A3_deeper|0
+{'task': 'Recon_n200_q4_pca_random_s1', 'arm': 'A3_deeper', 'start': 0, 'train_macro_f1': 0.8075, 'loss_ratio': 0.6331224808943227, 'val_macro_f1': 0.784, 'test_macro_f1': 0.7709, 'seconds': 1519.0}
+--- [5/24] Recon_n200_q4_pca_random_s2|A1_restart|3
+{'task': 'Recon_n200_q4_pca_random_s2', 'arm': 'A1_restart', 'start': 3, 'train_macro_f1': 0.7575, 'loss_ratio': 0.7854310694218165, 'val_macro_f1': 0.77, 'test_macro_f1': 0.736, 'seconds': 880.4}
+--- [6/24] Recon_n200_q4_pca_random_s2|R2_head_only|0
+{'task': 'Recon_n200_q4_pca_random_s2', 'arm': 'R2_head_only', 'start': 0, 'train_macro_f1': 0.7424, 'loss_ratio': 0.7458026219431436, 'val_macro_f1': 0.805, 'test_macro_f1': 0.7635, 'seconds': 0.1}
+--- [7/24] Spoofing_n200_q4_pca_random_s1|A1_restart|1
+{'task': 'Spoofing_n200_q4_pca_random_s1', 'arm': 'A1_restart', 'start': 1, 'train_macro_f1': 0.6972, 'loss_ratio': 0.8388774585227284, 'val_macro_f1': 0.6754, 'test_macro_f1': 0.6675, 'seconds': 400.0}
+--- [8/24] Spoofing_n200_q4_pca_random_s2|A1_restart|4
+{'task': 'Spoofing_n200_q4_pca_random_s2', 'arm': 'A1_restart', 'start': 4, 'train_macro_f1': 0.7014, 'loss_ratio': 0.8472436546185516, 'val_macro_f1': 0.7135, 'test_macro_f1': 0.6761, 'seconds': 400.3}
+--- [9/24] Spoofing_n200_q4_pca_random_s2|A5_kernel|0
+{'task': 'Spoofing_n200_q4_pca_random_s2', 'arm': 'A5_kernel', 'start': 0, 'train_macro_f1': 0.7199, 'loss_ratio': nan, 'val_macro_f1': 0.7185, 'test_macro_f1': 0.6935, 'seconds': 5.7}
+--- [10/24] BruteForce_n200_q4_pca_random_s0|A1_restart|4
+{'task': 'BruteForce_n200_q4_pca_random_s0', 'arm': 'A1_restart', 'start': 4, 'train_macro_f1': 0.7342, 'loss_ratio': 0.7604296209916661, 'val_macro_f1': 0.6798, 'test_macro_f1': 0.7011, 'seconds': 400.1}
+--- [11/24] BruteForce_n200_q4_pca_random_s0|A3_deeper|0
+{'task': 'BruteForce_n200_q4_pca_random_s0', 'arm': 'A3_deeper', 'start': 0, 'train_macro_f1': 0.745, 'loss_ratio': 0.7488426520759234, 'val_macro_f1': 0.7148, 'test_macro_f1': 0.7159, 'seconds': 896.7}
+--- [12/24] BruteForce_n200_q4_pca_random_s1|R2_head_only|0
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'arm': 'R2_head_only', 'start': 0, 'train_macro_f1': 0.7448, 'loss_ratio': 0.7798276784695957, 'val_macro_f1': 0.7287, 'test_macro_f1': 0.7133, 'seconds': 0.1}
+--- [13/24] BruteForce_n200_q4_pca_random_s2|A1_restart|2
+{'task': 'BruteForce_n200_q4_pca_random_s2', 'arm': 'A1_restart', 'start': 2, 'train_macro_f1': 0.6946, 'loss_ratio': 0.8117294326511761, 'val_macro_f1': 0.7223, 'test_macro_f1': 0.7028, 'seconds': 405.3}
+--- [14/24] Web_n200_q4_pca_random_s1|A1_restart|2
+{'task': 'Web_n200_q4_pca_random_s1', 'arm': 'A1_restart', 'start': 2, 'train_macro_f1': 0.7499, 'loss_ratio': 0.7885434522469376, 'val_macro_f1': 0.7317, 'test_macro_f1': 0.7125, 'seconds': 402.6}
+--- [15/24] Web_n200_q4_pca_random_s1|A2_readout|0
+{'task': 'Web_n200_q4_pca_random_s1', 'arm': 'A2_readout', 'start': 0, 'train_macro_f1': 0.7725, 'loss_ratio': 0.6984371566977317, 'val_macro_f1': 0.733, 'test_macro_f1': 0.7125, 'seconds': 485.5}
+--- [16/24] Web_n200_q4_pca_random_s1|R2_head_only|0
+{'task': 'Web_n200_q4_pca_random_s1', 'arm': 'R2_head_only', 'start': 0, 'train_macro_f1': 0.7337, 'loss_ratio': 0.8163751864424049, 'val_macro_f1': 0.7202, 'test_macro_f1': 0.6877, 'seconds': 0.1}
+--- [17/24] Web_n200_q4_pca_random_s2|A4_reupload|0
+{'task': 'Web_n200_q4_pca_random_s2', 'arm': 'A4_reupload', 'start': 0, 'train_macro_f1': 0.7075, 'loss_ratio': 0.830970868848899, 'val_macro_f1': 0.7082, 'test_macro_f1': 0.6882, 'seconds': 451.1}
+--- [18/24] benign_vs_attack_n200_q4_pca_random_s0|A0_baseline|0
+{'task': 'benign_vs_attack_n200_q4_pca_random_s0', 'arm': 'A0_baseline', 'start': 0, 'train_macro_f1': 0.7406, 'loss_ratio': 0.7209500996735272, 'val_macro_f1': 0.7338, 'test_macro_f1': 0.7392, 'seconds': 404.8}
+--- [19/24] benign_vs_attack_n200_q4_pca_random_s0|A3_deeper|0
+{'task': 'benign_vs_attack_n200_q4_pca_random_s0', 'arm': 'A3_deeper', 'start': 0, 'train_macro_f1': 0.7525, 'loss_ratio': 0.6527496851984513, 'val_macro_f1': 0.7431, 'test_macro_f1': 0.7485, 'seconds': 893.4}
+--- [20/24] benign_vs_attack_n200_q4_pca_random_s1|A1_restart|3
+{'task': 'benign_vs_attack_n200_q4_pca_random_s1', 'arm': 'A1_restart', 'start': 3, 'train_macro_f1': 0.765, 'loss_ratio': 0.668626529918464, 'val_macro_f1': 0.7606, 'test_macro_f1': 0.7525, 'seconds': 405.5}
+--- [21/24] benign_vs_attack_n200_q4_pca_random_s1|A5_kernel|0
+{'task': 'benign_vs_attack_n200_q4_pca_random_s1', 'arm': 'A5_kernel', 'start': 0, 'train_macro_f1': 0.7963, 'loss_ratio': nan, 'val_macro_f1': 0.7946, 'test_macro_f1': 0.773, 'seconds': 6.0}
+--- [22/24] multiclass_n200_q4_pca_random_s0|R2_head_only|0
+{'task': 'multiclass_n200_q4_pca_random_s0', 'arm': 'R2_head_only', 'start': 0, 'train_macro_f1': 0.5309, 'loss_ratio': 0.5523269805178314, 'val_macro_f1': 0.5087, 'test_macro_f1': 0.5107, 'seconds': 1.8}
+--- [23/24] multiclass_n200_q4_pca_random_s1|A1_restart|2
+{'task': 'multiclass_n200_q4_pca_random_s1', 'arm': 'A1_restart', 'start': 2, 'train_macro_f1': 0.3128, 'loss_ratio': 0.756427248317796, 'val_macro_f1': 0.2868, 'test_macro_f1': 0.2816, 'seconds': 1792.6}
+--- [24/24] multiclass_n200_q4_pca_random_s1|A3_deeper|0
+{'task': 'multiclass_n200_q4_pca_random_s1', 'arm': 'A3_deeper', 'start': 0, 'train_macro_f1': 0.3727, 'loss_ratio': 0.7062598707259492, 'val_macro_f1': 0.3707, 'test_macro_f1': 0.3711, 'seconds': 6928.7}

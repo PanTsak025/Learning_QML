@@ -1,0 +1,42 @@
+nohup: ignoring input
+shard 7/8: 20 jobs
+--- [1/20] Recon_n200_q4_pca_random_s0|A1_restart|2
+{'task': 'Recon_n200_q4_pca_random_s0', 'arm': 'A1_restart', 'start': 2, 'train_macro_f1': 0.7475, 'loss_ratio': 0.727827051528655, 'val_macro_f1': 0.7629, 'test_macro_f1': 0.7648, 'seconds': 384.9}
+--- [2/20] Recon_n200_q4_pca_random_s2|A0_baseline|0
+{'task': 'Recon_n200_q4_pca_random_s2', 'arm': 'A0_baseline', 'start': 0, 'train_macro_f1': 0.7498, 'loss_ratio': 0.7663974938479172, 'val_macro_f1': 0.7996, 'test_macro_f1': 0.7729, 'seconds': 389.9}
+--- [3/20] Spoofing_n200_q4_pca_random_s0|A1_restart|3
+{'task': 'Spoofing_n200_q4_pca_random_s0', 'arm': 'A1_restart', 'start': 3, 'train_macro_f1': 0.6523, 'loss_ratio': 0.8613859972836306, 'val_macro_f1': 0.6472, 'test_macro_f1': 0.6484, 'seconds': 1046.8}
+--- [4/20] Spoofing_n200_q4_pca_random_s1|A2_readout|0
+{'task': 'Spoofing_n200_q4_pca_random_s1', 'arm': 'A2_readout', 'start': 0, 'train_macro_f1': 0.7093, 'loss_ratio': 0.7930211317909124, 'val_macro_f1': 0.6918, 'test_macro_f1': 0.682, 'seconds': 471.6}
+--- [5/20] Spoofing_n200_q4_pca_random_s2|A1_restart|1
+{'task': 'Spoofing_n200_q4_pca_random_s2', 'arm': 'A1_restart', 'start': 1, 'train_macro_f1': 0.6936, 'loss_ratio': 0.8550645586847394, 'val_macro_f1': 0.7093, 'test_macro_f1': 0.6716, 'seconds': 879.0}
+--- [6/20] Spoofing_n200_q4_pca_random_s2|A4_reupload|0
+{'task': 'Spoofing_n200_q4_pca_random_s2', 'arm': 'A4_reupload', 'start': 0, 'train_macro_f1': 0.6441, 'loss_ratio': 0.8703333423865568, 'val_macro_f1': 0.6829, 'test_macro_f1': 0.6531, 'seconds': 443.4}
+--- [7/20] BruteForce_n200_q4_pca_random_s0|A1_restart|1
+{'task': 'BruteForce_n200_q4_pca_random_s0', 'arm': 'A1_restart', 'start': 1, 'train_macro_f1': 0.7442, 'loss_ratio': 0.7615212605290874, 'val_macro_f1': 0.6932, 'test_macro_f1': 0.707, 'seconds': 401.9}
+--- [8/20] BruteForce_n200_q4_pca_random_s0|A4_reupload|0
+{'task': 'BruteForce_n200_q4_pca_random_s0', 'arm': 'A4_reupload', 'start': 0, 'train_macro_f1': 0.7269, 'loss_ratio': 0.7463325911305888, 'val_macro_f1': 0.6925, 'test_macro_f1': 0.7142, 'seconds': 447.1}
+--- [9/20] BruteForce_n200_q4_pca_random_s1|A1_restart|4
+{'task': 'BruteForce_n200_q4_pca_random_s1', 'arm': 'A1_restart', 'start': 4, 'train_macro_f1': 0.7372, 'loss_ratio': 0.7814878347732879, 'val_macro_f1': 0.7129, 'test_macro_f1': 0.7105, 'seconds': 402.9}
+--- [10/20] BruteForce_n200_q4_pca_random_s2|A2_readout|0
+{'task': 'BruteForce_n200_q4_pca_random_s2', 'arm': 'A2_readout', 'start': 0, 'train_macro_f1': 0.7249, 'loss_ratio': 0.7745362799357031, 'val_macro_f1': 0.7537, 'test_macro_f1': 0.7219, 'seconds': 493.2}
+--- [11/20] BruteForce_n200_q4_pca_random_s2|A3_deeper|0
+{'task': 'BruteForce_n200_q4_pca_random_s2', 'arm': 'A3_deeper', 'start': 0, 'train_macro_f1': 0.7172, 'loss_ratio': 0.7863192849841615, 'val_macro_f1': 0.7544, 'test_macro_f1': 0.7292, 'seconds': 891.7}
+--- [12/20] Web_n200_q4_pca_random_s0|A1_restart|4
+{'task': 'Web_n200_q4_pca_random_s0', 'arm': 'A1_restart', 'start': 4, 'train_macro_f1': 0.6871, 'loss_ratio': 0.8576784288513022, 'val_macro_f1': 0.6851, 'test_macro_f1': 0.6684, 'seconds': 404.3}
+--- [13/20] Web_n200_q4_pca_random_s0|A3_deeper|0
+{'task': 'Web_n200_q4_pca_random_s0', 'arm': 'A3_deeper', 'start': 0, 'train_macro_f1': 0.7073, 'loss_ratio': 0.8223720953622096, 'val_macro_f1': 0.6905, 'test_macro_f1': 0.685, 'seconds': 896.0}
+--- [14/20] Web_n200_q4_pca_random_s2|A1_restart|2
+{'task': 'Web_n200_q4_pca_random_s2', 'arm': 'A1_restart', 'start': 2, 'train_macro_f1': 0.7, 'loss_ratio': 0.8174645780201292, 'val_macro_f1': 0.7152, 'test_macro_f1': 0.7157, 'seconds': 401.7}
+--- [15/20] benign_vs_attack_n200_q4_pca_random_s1|A0_baseline|0
+{'task': 'benign_vs_attack_n200_q4_pca_random_s1', 'arm': 'A0_baseline', 'start': 0, 'train_macro_f1': 0.7791, 'loss_ratio': 0.6590614147667807, 'val_macro_f1': 0.7822, 'test_macro_f1': 0.7652, 'seconds': 406.2}
+--- [16/20] benign_vs_attack_n200_q4_pca_random_s2|A1_restart|3
+{'task': 'benign_vs_attack_n200_q4_pca_random_s2', 'arm': 'A1_restart', 'start': 3, 'train_macro_f1': 0.7708, 'loss_ratio': 0.6960922205364573, 'val_macro_f1': 0.7771, 'test_macro_f1': 0.7421, 'seconds': 406.8}
+--- [17/20] multiclass_n200_q4_pca_random_s0|A0_baseline|0
+{'task': 'multiclass_n200_q4_pca_random_s0', 'arm': 'A0_baseline', 'start': 0, 'train_macro_f1': 0.4143, 'loss_ratio': 0.7679307892395307, 'val_macro_f1': 0.4051, 'test_macro_f1': 0.405, 'seconds': 1794.5}
+--- [18/20] multiclass_n200_q4_pca_random_s0|A1_restart|1
+{'task': 'multiclass_n200_q4_pca_random_s0', 'arm': 'A1_restart', 'start': 1, 'train_macro_f1': 0.2586, 'loss_ratio': 0.7711051881287548, 'val_macro_f1': 0.2692, 'test_macro_f1': 0.261, 'seconds': 3172.5}
+--- [19/20] multiclass_n200_q4_pca_random_s1|A1_restart|4
+{'task': 'multiclass_n200_q4_pca_random_s1', 'arm': 'A1_restart', 'start': 4, 'train_macro_f1': 0.3251, 'loss_ratio': 0.7576750750003457, 'val_macro_f1': 0.3089, 'test_macro_f1': 0.3112, 'seconds': 3086.9}
+--- [20/20] multiclass_n200_q4_pca_random_s1|A4_reupload|0
+{'task': 'multiclass_n200_q4_pca_random_s1', 'arm': 'A4_reupload', 'start': 0, 'train_macro_f1': 0.3439, 'loss_ratio': 0.7797876118095854, 'val_macro_f1': 0.3199, 'test_macro_f1': 0.3294, 'seconds': 2000.7}

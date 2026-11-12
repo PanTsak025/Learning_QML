@@ -1,0 +1,46 @@
+{
+  "diag": {
+    "scenarios": [
+      "Recon",
+      "Spoofing",
+      "BruteForce",
+      "Web",
+      "benign_vs_attack",
+      "multiclass"
+    ],
+    "primary_scenarios": [
+      "Recon",
+      "Spoofing",
+      "BruteForce",
+      "Web",
+      "benign_vs_attack"
+    ],
+    "n_train": 200,
+    "n_qubits": 4,
+    "reducer": "pca",
+    "sampling": "random",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "extra_starts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "deeper_reps": 4,
+    "kernel_C": [
+      0.1,
+      1,
+      10
+    ]
+  },
+  "model": {
+    "ansatz": "efficient_su2",
+    "reps": 2,
+    "evals_per_parameter": 25
+  },
+  "n_val_per_class": 500
+}
